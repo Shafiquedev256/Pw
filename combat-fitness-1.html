@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<title>RING & IRON — Training System</title>
+
+<!-- PWA: installable on iOS + Android -->
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIlJpbmcgJiBJcm9uIFx1MjAxNCBUcmFpbmluZyBTeXN0ZW0iLCAic2hvcnRfbmFtZSI6ICJSaW5nICYgSXJvbiIsICJkZXNjcmlwdGlvbiI6ICJEYWlseSBib3hpbmcsIGtpY2tpbmcgYW5kIHN0cmVuZ3RoIHRyYWluaW5nIGNvYWNoLCBwbGFubmVyIGFuZCBwcm9ncmVzcyB0cmFja2VyLiIsICJzdGFydF91cmwiOiAiLi9jb21iYXQtZml0bmVzcy5odG1sIiwgInNjb3BlIjogIi4vIiwgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsICJvcmllbnRhdGlvbiI6ICJwb3J0cmFpdCIsICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMxMjExMTAiLCAidGhlbWVfY29sb3IiOiAiIzEyMTExMCIsICJpY29ucyI6IFt7InNyYyI6ICJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQU1BQUFBREFDQUlBQUFEZHZ2dFFBQUFJYUVsRVFWUjRuTzNkVDI5YldSM0c4ZWZjUC9uam1OWnRFa1FYUVV5a2RocXg2aXVBOTFDQjBBaUpzbUxWUFFzb1VvUm13WkpXZE1Hc095dmV3L1E5SUhVNkV5RkJHS1cwcGVNRXgwN3FlLzFqY1RNbkhoL0hFOStmSFo5N3ovUFpkTmZlV04rY3g2NXliOHpOR3kwUWxSVXQrZ0tvMmhnUXFUQWdVbUZBcE1LQVNJVUJrUW9ESWhVR1JDb01pRlFZRUtrd0lGSmhRS1RDZ0VpRkFaRUtBeUlWQmtRcURJaFVHQkNwTUNCU1lVQ2t3b0JJaFFHUkNnTWlGUVpFS2d5SVZCZ1FxVEFnVW1GQXBNS0FTSVVCa1FvREloVUdSQ29NaUZRWUVLa3dJRkpoUUtUQ2dFaUZBWkVLQXlJVkJrUXFESWhVR0JDcE1DQlNZVUNrd29BbWlZRFlMUG9pL01hQUxoUWJuQWdPTStGck5BRmZuUEVTZzNlWjNGdUxmL09EbFhlWjhCeTZTTExvQy9CUll0RE81TWVyOGRQdHRlMlZDQ0pQWHAxdXBpYVRSVitaZjNnQ2pVb01EalBaV1kwL3ZkUDhmaHE5ZWk5Ly9HSGo0YTJWTjMyZVEyTXdvRzlKRE5xNTNHM0V6KzQwTjlQb09KZlk0T3RNZHJkV0g5NWFlY3VHSEF6b1hMRmNPeXZ4czl2TnpUVHE1QkliR01BWXRQT2lvZVczZlVuWTBCQytCenBqbDZzNGV6cjVlU2pGbisxY2RyY2FnSGw4Y0xLUm1wenZod0F3b0VLeFhEdU44N05uNUpnNWF5aVQzYTFWQUd6STRvU05XYTZ4SThVdEd5djBFMmpDY3JtNFphNmdBL3JPNVhKeHkwYUVPMkdYWEM0WHQyeFlvQ2ZRVk12bDRwWlpJUVpVWXJsYzNMSkNjQk5XZXJsYzNES0VkZ0lwbDh2RkxRc29vSmtzbHl2d0xRdGx3bWE0WEs2UXR5eUlFMmpteStVS2RzdnFIOUNjbHNzVjVwYlZmTUxtdWx5dUFMZXN6Z0hOWkxtbVBVRU1ZTDdac2hCK2pyRzJBWTM4YkdHSmV1U2J2MmN3NVQ5OTFsQVlQOGRZejREMHl5VkFEQUE0ekdRMW12cXRURGhiVnNPQTlNc2xnQURYRXZQeFY3MzdMenZ2c3NGYVBQVXRHWUZzV2QwQ21zbHlDZENLemUvKzFmM2tQNmYvT01sLzhVWG5UWC9RTE4xUXJiZXNWZ0hOWkxsRTBJck5vLzNlNDRQVEc3RnBKZVpGTi8vb1MwVkR0ZDZ5K2dRMHErVnFKVVU5Snh1cHlZRytvSldZejd2NVI4cHpxS1piVnBPQVpyaGNqL2E3anc5T05vZitEekFUWEUvTWk1NjZvVHB1V1IwQ212bHliVGgzTVdlQ1ZtSmVuSERMUmxVK29Ma3MxN2c0TWtFcjVwYU5xblpBYzEwdUY3Zk1WZUdBcm1DNVhOeXlFVlVONk1xV3k4VXRHMWJKZ0s1NHVWemNNcXQ2QVMxa3VWemNza0xGQWxyZ2NybTRaYWhXUUF0ZkxoZTNyRElCZWJKY3JzQzNyQm9CZWJWY3JwQzNyQUlCZWJoY3JtQzN6UGVBdkYwdVY1aGI1blZBbmkrWEs4QXQ4emVnU2l5WEs3UXQ4elNnQ2kyWEs2Z3Q4ekdneWkyWEs1d3Q4eTZnaWk2WEs1QXQ4eXVnU2krWEs0UXQ4eWlnMk9DLzZ1V0tEVzR1YnJsY3cxdjJ0ais0bnBoOHlyOWhaTXRlOThXcmhNek5HNjFGWHdNQUdPQlVjRzh0ZnJxOXRwbEczYno4Y2YzeHYzdWZ2RDY5a1N5K0hpc3hPTXJrdzBiOGRIdnRSOHRSWHpEdEYxZDhLYzNZL09tcjN0TlhwNm1aK3FiOU9mSGxCRElHNzBYdXJTVWZMRWZIdVVTbG5vSVFHWFJ5ZVg3VWo0Rm8rdWNpekU4dWFNYm03OTM4WlM5Zk1rYW12eklEOUFXSndVK3VwVVU5bnB4RHZnUTBFRnlMelpPRGs5LytzN3VlR0NuMVdJeE1zSjVHZi92d2UzY2JjVHVUMUkvWE9BSUd3UEZBL3JxOWRuOTk2WCtsdmoweXdXWmlQanZzLy9MTFRuR0FlZkx0NFV0QUFBYUM5ZFE4ZVhYNisvMXVLeTdUVUFSMGM5bElvMmUzbTNjYmNYdk9Ud082NUNYbHdNbEFubnl3OXJPTnBYS2ZwUHFDOWRROFA4cCt2WGVjQ1pZaVgrcUJWd0VCeUFVYnFYbDhjUHBvdjllS2pjalVyMVJzME1sbE00MmUzVzd1ck1UdGJKRU5EZGZ6ODQybE42VStRL1VGRzRsNWZwZzkyT3RrSXNzUkJ2N2s0MXRBT0cvbzVORityMVZxeXhMYjBKM216bXA4dUtDR1J1cDVYYXFlcktqbnFQOWdyNU1KbHFkLzBNeThlUmNRZ0Z5d2VkWlF5UzBiYm1naFcrYWVQU1hla05ubGVyQjNuQW1XSS9oV0Qvd01DTVYzbm03TGtzVnQyWnlXeThONjRHMUFxT3lXQmJKY2xyOEJvWUpiRnM1eVdWNEhoRXB0V1ZETFpma2VFQ3F5WmFFdGwxV0JnT0Q5bGdXNFhGWTFBb0xIV3hibWNsbVZDUWhlYmxtd3kyVlZLU0I0dG1VaEw1ZFZzWURnelpZRnZseFc5UUtDQjF2RzViSXFHUkFXdW1WY3JtRlZEUWdMMmpJdTE0Z0tCNFFyM3pJdWw2dmFBZUVLdDR6TE5WYmxBOEtWYkJtWDZ5SjFDQWh6M2pJdTF3UTFDUWh6MnpMRDVacW9QZ0ZoRGx0Mm1JbmhjazFVcTRBdzB5Mzc5RTd6YmlQK09wTy9iSE81THVUTHJjMnpsUmk4NmN2RFc4dTdXNDEyTG1iNit6aUxaMnU4N09VdmUvbjk5YVZ5VHpYb0N6WlNlL2JVYXJtc2VnWUVJRFo0MjVlSHQxWjJ0MWJibVJnemRVTUR3VktFWldPT1N0Mm9mN1pjUjNhNTZuYjJGSkpGWDhDODJDMERzTHUxMnM0RlU1NURrVUZmOEg1UXBwNmg1VHF1NVhKWmRYc1BORXovdWN3QUplNWpyL0ZuTGxlZEE4SXNQcGROcTk2ZnVWeTFuVEJMdjJXWEY4NXlXVFUvZ1FyNkxidU1vSmJMQ2lJZ3pIL0xRbHN1cS80VFpzMXZ5d0pjTGl1VUU2Z3dqeTBMYzdtc3NBTENyTGNzMk9XeUFwb3dhMVpiRnZKeVdjR2RRQVg5bGdXK1hGYWdBVUczWlZ3dUs4UUpzOHB0R1pkcldMZ25VR0hhTGVOeWpRZzlJRXl6WlZ3dVY5QVRabDFteTdoY1kvRUVPak41eTdoY0YyRkE1eTdhTWk3WEJKeXdieG5ac3NOYytseXVpUmpRS0x0bGdQeGhxNUVhZkhiSTVib1FBeHFqMkxJL0g1eXVHUFBUNittdjlqcVp5QXJQbm5GcWUxZkdUR1NDeEtENERVdGUvWTRjZi9CTjlDVEZYY3lwWVQwWFlrQ1RGTDlaa3ZGTXdJQytBK3VaakFHUkNnTWlGUVpFS2d5SVZCZ1FxVEFnVW1GQXBNS0FTSVVCa1FvREloVUdSQ29NaUZRWUVLa3dJRkpoUUtUQ2dFaUZBWkVLQXlJVkJrUXFESWhVR0JDcE1DQlNZVUNrd29CSWhRR1JDZ01pRlFaRUtneUlWQmdRcVRBZ1VtRkFwTUtBU0lVQmtRb0RJaFVHUkNvTWlGUVlFS2t3SUZKaFFLVENnRWlGQVpFS0F5SVZCa1FxL3djTGpUa2xMQzdWWkFBQUFBQkpSVTVFcmtKZ2dnPT0iLCAic2l6ZXMiOiAiMTkyeDE5MiIsICJ0eXBlIjogImltYWdlL3BuZyIsICJwdXJwb3NlIjogImFueSBtYXNrYWJsZSJ9LCB7InNyYyI6ICJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQWdBQUFBSUFDQUlBQUFCN0drT3RBQUFRSDBsRVFWUjRuTzNYN1hVanh4bUVVYTRUc0tSRTdQeWpzRU54QnY1Qm5SVzFXR0FId0h4MHZYVnZCSU5tZHoySDMvNzQvYmNQQVByODQrb1BBT0FhQWdCUVNnQUFTZ2tBUUNrQkFDZ2xBQUNsQkFDZ2xBQUFsQklBZ0ZJQ0FGQktBQUJLQ1FCQUtRRUFLQ1VBQUtVRUFLQ1VBQUNVRWdDQVVnSUFVRW9BQUVvSkFFQXBBUUFvSlFBQXBRUUFvSlFBQUpRU0FJQlNBZ0JRU2dBQVNna0FRQ2tCQUNnbEFBQ2xCQUNnbEFBQWxCSUFnRklDQUZCS0FBQktDUUJBS1FFQUtDVUFBS1VFQUtDVUFBQ1VFZ0NBVWdJQVVFb0FBRW9KQUVBcEFRQW9KUUFBcFFRQW9KUUFBSlFTQUlCU0FnQlFTZ0FBU2drQVFDa0JBQ2dsQUFDbEJBQ2dsQUFBbEJJQWdGSUNBRkJLQUFCS0NRQkFLUUVBS0NVQUFLVUVBS0NVQUFDVUVnQ0FVZ0lBVUVvQUFFb0pBRUFwQVFBb0pRQUFwUVFBb0pRQUFKUVNBSUJTQWdCUVNnQUFTZ2tBUUNrQkFDZ2xBQUNsQkFDZ2xBQUFsQklBZ0ZJQ0FGQktBQUJLQ1FCQUtRRUFLQ1VBQUtVRUFLQ1VBQUNVRWdDQVVnSUFVRW9BQUVvSkFFQXBBUUFvSlFBQXBRUUFvSlFBQUpRU0FJQlNBZ0JRU2dBQVNna0FRQ2tCQUNnbEFBQ2xCQUNnbEFBQWxCSUFnRklDQUZCS0FBQktDUUJBS1FFQUtDVUFBS1VFQUtDVUFBQ1VFZ0NBVWdJQVVFb0FBRW9KQUVBcEFRQW9KUUFBcFFRQW9KUUFBSlFTQUlCU0FnQlFTZ0FBU2drQVFDa0JBQ2dsQUZUN3o3LytlZlVud0dVRWdGNmY2NjhCMUJJQVNuM2RmUTJna3dEUTZIYnhOWUJDQWtDZGUxdXZBYlFSQUxvOFhua05vSW9BVUdUTHZtc0FQUVNBRnR1WFhRTW9JUUJVZUhiVE5ZQUdBc0I4cjYyNUJqQ2VBRERjT3p1dUFjd21BRXoyL29KckFJTUpBR1B0dGQwYXdGUUN3RXo3cnJZR01KSUFNTkFSZTYwQnpDTUFUSFBjVW1zQXd3Z0FveHk5MFJyQUpBTEFIT2Vzc3dZd2hnQXd4Sm03ckFITUlBQk1jUDRpYXdBRENBRHhydHBpRFNDZEFKRHQyaFhXQUtJSkFNRlcyTjhWdmdGZUl3Q2tXbWQ1MS9rU2VJb0FFR20xelYzdGUyQUxBU0RQbW11NzVsZkJBd0pBbUpWM2R1VnZnMXNDUUpMMUYzYjlMNFR2QklBWUtkdWE4cDBnQUdUSVd0V3NyNldXQUJBZ2NVOFR2NWsyQXNEcWNwYzA5OHNwSVFBc0xYMUQwNytmMlFTQWRjMVl6eG0vZ3BFRWdFVk4yczFKdjRWSkJJQVZ6VnZNZWIrSUFRU0E1VXpkeXFtL2kxd0N3RnBtcitUc1gwY2NBV0FoRGZ2WThCdEpJUUNzb21jWmUzNHBpeE1BbHRDMmlXMi9selVKQU5mclhNUE9YODFTQklDTE5lOWc4MjluQlFMQWxTeWdFK0JDQXNCbGJOOG41OEJWQklCcldMMnZuQWFYRUFBdVlPOXVPUlBPSndDY3pkTGQ0MlE0bVFCd0todjNtUFBoVEFMQWVhemJGazZKMHdnQUo3RnIyemtyemlFQW5NR2lQY3VKY1FJQjRIQzI3RFhPamFNSkFNZXlZdTl3ZWh4S0FEaVEvWHFmTStRNEFzQlJMTmRlbkNRSEVRQU9ZYlAyNVR3NWdnQ3dQMnQxQktmSzdnU0FuZG1wNHpoYjlpVUE3TWxDSGMwSnN5TUJZRGVKMi9Udi8vN3Y2azk0V3VJNXN5WUJZQitKcS9TNS9ocEFMUUZnQjRsNzlIWDNOWUJPQXNDN0VwZm9kdkUxZ0VJQ3dGc1NOK2plMW1zQWJRU0ExeVd1eitPVjF3Q3FDQUF2U3R5ZExmdXVBZlFRQUY2UnVEamJsMTBES0NFQVBDMXhhNTdkZEEyZ2dRRHduTVNWZVczTk5ZRHhCSUFuSk83TE96dXVBY3dtQUd5VnVDenZMN2dHTUpnQXNFbmlwdXkxM1JyQVZBTEFyeVd1eWI2cnJRR01KQUQ4UXVLT0hMSFhHc0E4QXNBamlRdHkzRkpyQU1NSUFIY2xic2ZSRzYwQlRDSUEvRnppYXB5enpockFHQUxBVHlUdXhabTdyQUhNSUFEOEtIRXB6bDlrRFdBQUFlQnZFamZpcWkzV0FOSUpBSDlKWElkclYxZ0RpQ1lBL0NseEYxYlkzeFcrNFZtSmYydU9JQUI4ZkdRdXdqckx1ODZYYkpmNEYyZDNBa0RrRnF5MnVhdDl6eGFKZjNmMkpRRHRFbGRnemJWZDg2c2VTL3pyc3lNQnFKYjQvbGZlMlpXLzdaN0VPOEJlQktCWDRzdGZmMkhYLzhKYmlUZUJYUWhBcWNRM243S3RLZC81VmVKOTRIMEMwQ2p4dFdldGF0Ylhma3E4RmJ4SkFPb2t2dlBFUFUzODVzUzd3VHNFb0V2aUMwOWMwaytKWDU1NFEzaVpBQlJKZk51SkcvcFY0dmNuM2hOZUl3QXRFbDkxNG5yZVN2d1ZpYmVGRndoQWhjVDNuTGliOXlUK2xzUTd3N01FWUw3RWw1eTRtSThsL3FMRW04TlRCR0M0eERlY3VKVmJKUDZ1eFB2RGRnSXdXZUxyVFZ6SjdSSi9YZUl0WWlNQkdDdngzU2J1NDdNU2YyUGlYV0lMQVpncDhjVW1MdU5yRW45cDRvM2lsd1Jnb01TM21yaUo3MGo4dlluM2lzY0VZSnJFVjVxNGh1OUwvTldKdDRzSEJHQ1V4UGVadUlON1NmenRpWGVNZXdSZ2pzU1htYmlBKzBvOGdjU2J4azhKd0JDSmJ6SngrNDZRZUE2Sjk0MWJBakJCNG10TVhMM2pKSjVHNHEzakJ3SVFML0VkSnU3ZDBSTFBKUEh1OFpVQVpFdDhnWWxMZDQ3RWswbThnWHduQU1FUzMxN2l4cDBwOFh3Uzd5R2ZCQ0JWNHF0TFhMZnpKWjVTNG0za1F3QkNKYjYzeEYyN1N1SlpKZDVKQkNCUDRrdExYTFJySlo1WTRzMHNKd0JoRXQ5WTRwYXRJUEhjRXU5bk13Rklrdmk2RWxkc0hZbW5sM2hMYXdsQWpNUjNsYmhmcTBrOHc4Uzcya2tBTWlTK3FNVGxXbFBpU1NiZTJFSUNFQ0R4TFNWdTFzb1N6elB4M3JZUmdOVWx2cUxFdFZwZjRxa20zdDRxQXJDMHhQZVR1Rk1wRXM4MjhRNzNFSUIxSmI2Y3hJWEtrbmpDaVRlNWhBQXNLdkhOSkc1VG9zUnpUcnpQRFFSZ1JZbXZKWEdWY2lXZWR1S3RIazhBbHBQNFRoTDNLRjNpbVNmZTdka0VZQzJKTHlSeGlXWklQUG5FR3o2WUFDd2s4VzBrYnRBa2llZWZlTStuRW9CVkpMNkt4UFdaSi9HdmtIamJSeEtBSlNTK2g4VGRtU3J4YjVGNDUrY1JnT3Nsdm9URXhaa3Q4UytTZVBPSEVZQ0xKYjZCeEsxcGtQaDNTYnova3dqQWxSSnZmK0xLOUVqODZ5UytnakVFNERLSjl6NXhYOW9rL28wUzM4SU1BbkFaRDVVakpQNk5FdC9DREFKd3BjUjduN2d2UFJML09vbXZZQXdCdUZqaTdVOWNtUWFKZjVmRSt6K0pBRnd2OFEwa2JzMXNpWCtSeEpzL2pBQXNJZkVsSkM3T1ZJbC9pOFE3UDQ4QXJDTHhQU1R1emp5SmY0WEUyejZTQUN3azhWVWtyczhraWVlZmVNK25Fb0MxSkw2TnhBMmFJZkhrRTIvNFlBS3duTVFYa3JoRTZSTFBQUEZ1enlZQUswcDhKNGw3bEN2eHRCTnY5WGdDc0tqRTE1SzRTb2tTenpueFBqY1FnSFVsdnBuRWJjcVNlTUtKTjdtRUFDd3Q4ZVVrTGxTS3hMTk52TU05QkdCMWllOG5jYWZXbDNpcWliZTNpZ0FFU0h4RmlXdTFzc1R6VEx5M2JRUWdRK0piU3R5c05TV2VaT0tOTFNRQU1SSmZWT0p5clNieERCUHZhaWNCU0pMNHJoTDNheDJKcDVkNFMyc0pRSmpFMTVXNFlpdElQTGZFKzlsTUFQSWt2ckhFTGJ0VzRva2wzc3h5QWhBcDhhVWxMdHBWRXM4cThVNGlBS2tTMzF2aXJwMHY4WlFTYnlNZkFoQXQ4ZFVscnR1WkVzOG44Ujd5U1FDeUpiNjl4STA3UitMSkpONUF2aE9BZUlrdk1ISHBqcFo0Sm9sM2o2OEVZSUxFZDVpNGQ4ZEpQSTNFVzhjUEJHQ0l4TmVZdUhwSFNEeUh4UHZHTFFHWUkvRk5KbTdmdmhKUElQR204Vk1DTUVyaXkweGN3TDBrL3ZiRU84WTlBakJONHZ0TTNNSDNKZjdxeE52RkF3SXdVT0lyVFZ6RGR5VCszc1I3eFdNQ01GUGlXMDNjeE5jay90TEVHOFV2Q2NCWWlTODJjUm1mbGZnYkUrOFNXd2pBWkludk5uRWZ0MHY4ZFltM2lJMEVZTGpFMTV1NGtsc2svcTdFKzhOMkFqQmY0aHRPM01ySEVuOVI0czNoS1FKUUlmRWxKeTdtUFltL0pmSE84Q3dCYUpING5oTjM4MWJpcjBpOExieEFBSW9rdnVyRTlmd3E4ZnNUN3dtdkVZQXVpVzg3Y1VNL0pYNTU0ZzNoWlFKUUovR0ZKeTVwNGpjbjNnM2VJUUNORXQ5NTFwNW1mZTJueEZ2Qm13U2dWT0pyVDFuVmxPLzhLdkUrOEQ0QjZKWDQ1dGZmMXZXLzhGYmlUV0FYQWxBdDhlV3Z2TEFyZjlzOWlYZUF2UWhBdThUM3YrYk9ydmxWanlYKzlkbVJBQkM1QXF1dDdXcmZzMFhpMzUxOUNRQWZINWxic003bXJ2TWwyeVgreGRtZEFQQ254RVZZWVhsWCtJWm5KZjZ0T1lJQThKZkVYYmgyZjYwLzBRU0F2MGxjaDZ0VzJQcVRUZ0Q0VWVKR25ML0YxcDhCQklDZlNGeUtNeGZaK2pPREFQQnppWHR4emk1YmY4WVFBTzVLWEkyajE5bjZNNGtBOEVqaWRoeTMwZGFmWVFTQVgwaGNrQ09XMnZvemp3RHdhNGs3c3U5ZVczOUdFZ0EyU1Z5VHZWYmIrak9WQUxCVjRxYTh2OTNXbjhFRWdDY2tMc3M3QzI3OW1VMEFlRTdpdnJ5MjQ5YWY4UVNBcHlXdXpMTnJidjFwSUFDOEluRnJ0bSs2OWFlRUFQQ2l4TVhac3V6V254NEN3T3NTZCtmeHZsdC9xZ2dBYjBsY24zc3JiLzFwSXdDOEszR0RicmZlK2xOSUFOaEI0aEo5WFh6clR5Y0JZQitKZS9TNSs5YWZXdC8rK1AyM3E3K0JPUkxITkk3MVp5LytBMkJQdHVsb1RwZ2RDUUE3czFESGNiYnNTd0RZbjUwNmdsTmxkd0xBSWF6VnZwd25SeEFBam1Lejl1SWtPWWdBY0NETDlUNW55SEVFZ0dQWnIzYzRQUTRsQUJ6T2lyM0d1WEUwQWVBTXR1eFpUb3dUQ0FBbnNXamJPU3ZPSVFDY3g2NXQ0WlE0alFCd0t1djJtUFBoVEFMQTJXemNQVTZHa3drQUY3QjB0NXdKNXhNQXJtSHZ2bklhWEVJQXVJelYrK1FjdUlvQWNDWGI1d1M0a0FCd3NlWUZiUDd0ckVBQXVGN25EbmIrYXBZaUFDeWhiUTNiZmk5ckVnQlcwYk9KUGIrVXhRa0FDMmxZeG9iZlNBb0JZQzJ6OTNIMnJ5T09BTENjcVNzNTlYZVJTd0JZMGJ5dG5QZUxHRUFBV05Ta3haejBXNWhFQUZqWGpOMmM4U3NZU1FCWVd2cDZwbjgvc3drQXE4dmQwTnd2cDRRQUVDQnhTUk8vbVRZQ1FJYXNQYzM2V21vSkFERlNWalhsTzBFQVNMTCt0cTcvaGZDZEFCQm01WVZkK2R2Z2xnQ1FaODJkWGZPcjRBRUJJTkpxYTd2YTk4QVdBa0NxZFRaM25TK0Jwd2dBd1ZaWTNoVytBVjRqQUdTN2RuK3RQOUVFZ0hoWHJiRDFKNTBBTU1INVcyejlHVUFBR09MTVJiYit6Q0FBekhIT0xsdC94aEFBUmpsNm5hMC9rd2dBMHh5MzBkYWZZUVNBZ1k1WWF1dlBQQUxBVFB2dXRmVm5KQUZnckwxVzIvb3psUUF3MmZ2YmJmMFpUQUFZN3AwRnQvN01KZ0RNOTlxT1czL0dFd0FxUEx2bTFwOEdBa0NMN1p0dS9Ta2hBQlRac3V6V254NENRSmZIKzI3OXFTSUExTG0zOHRhZk5nSkFvOXV0dC80VUVnQktmVjE4NjA4bkFhRFg1KzViZjJwOSsrUDMzNjcrQmdBdTREOEFnRklDQUZCS0FBQktDUUJBS1FFQUtDVUFBS1VFQUtDVUFBQ1VFZ0NBVWdJQVVFb0FBRW9KQUVBcEFRQW9KUUFBcFFRQW9KUUFBSlFTQUlCU0FnQlFTZ0FBU2drQVFDa0JBQ2dsQUFDbEJBQ2dsQUFBbEJJQWdGSUNBRkJLQUFCS0NRQkFLUUVBS0NVQUFLVUVBS0NVQUFDVUVnQ0FVZ0lBVUVvQUFFb0pBRUFwQVFBb0pRQUFwUVFBb0pRQUFKUVNBSUJTQWdCUVNnQUFTZ2tBUUNrQkFDZ2xBQUNsQkFDZ2xBQUFsQklBZ0ZJQ0FGQktBQUJLQ1FCQUtRRUFLQ1VBQUtVRUFLQ1VBQUNVRWdDQVVnSUFVRW9BQUVvSkFFQXBBUUFvSlFBQXBRUUFvSlFBQUpRU0FJQlNBZ0JRU2dBQVNna0FRQ2tCQUNnbEFBQ2xCQUNnbEFBQWxCSUFnRklDQUZCS0FBQktDUUJBS1FFQUtDVUFBS1VFQUtDVUFBQ1VFZ0NBVWdJQVVFb0FBRW9KQUVBcEFRQW9KUUFBcFFRQW9KUUFBSlFTQUlCU0FnQlFTZ0FBU2drQVFDa0JBQ2dsQUFDbEJBQ2dsQUFBbEJJQWdGSUNBRkJLQUFCS0NRQkFLUUVBS0NVQUFLVUVBS0NVQUFDVUVnQ0FVZ0lBVUVvQUFFb0pBRUFwQVFBb0pRQUFwUVFBb0pRQUFKUVNBSUJTQWdCUVNnQUFTZ2tBUUNrQkFDZ2xBQUNsQkFDZ2xBQUFsQklBZ0ZJQ0FGQktBQUJLQ1FCQXFmOER2Q2UyN3lEa3g5WUFBQUFBU1VWT1JLNUNZSUk9IiwgInNpemVzIjogIjUxMng1MTIiLCAidHlwZSI6ICJpbWFnZS9wbmciLCAicHVycG9zZSI6ICJhbnkgbWFza2FibGUifV19">
+<meta name="theme-color" content="#121110">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Ring & Iron">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" sizes="192x192" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#121110;
+  --bg-2:#0d0c0b;
+  --surface:#1c1a17;
+  --surface-2:#242019;
+  --line:#38332c;
+  --text:#f2ede4;
+  --text-dim:#a79e8e;
+  --text-faint:#726a5c;
+  --accent:#e2401f;
+  --accent-dim:#7a2314;
+  --gold:#d4a24c;
+  --good:#5fa777;
+  --bad:#c04a3e;
+  --radius:14px;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+*{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;}
+body{padding-bottom:calc(72px + var(--safe-bottom)); min-height:100vh; overscroll-behavior-y:none;}
+h1,h2,h3,.display{font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:0.02em; margin:0;}
+.mono{font-family:'Space Mono',monospace;}
+::selection{background:var(--accent); color:#fff;}
+button{font-family:inherit; cursor:pointer;}
+input{font-family:inherit;}
+
+/* ---------- top header ---------- */
+.topbar{
+  position:sticky; top:0; z-index:20;
+  background:linear-gradient(180deg, var(--bg) 70%, transparent);
+  padding:16px 18px 8px;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.brand{display:flex; align-items:baseline; gap:8px;}
+.brand .mark{width:10px;height:10px;background:var(--accent); display:inline-block; transform:rotate(45deg);}
+.brand-text{font-family:'Oswald'; font-weight:700; font-size:15px; letter-spacing:0.12em; text-transform:uppercase;}
+.brand-text b{color:var(--accent);}
+.icon-btn{background:var(--surface); border:1px solid var(--line); color:var(--text-dim); width:38px; height:38px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:16px;}
+.icon-btn:active{background:var(--surface-2);}
+
+main{padding:0 16px 28px; max-width:640px; margin:0 auto;}
+.view{display:none; animation:fade .25s ease;}
+.view.active{display:block;}
+@keyframes fade{from{opacity:0; transform:translateY(4px)} to{opacity:1; transform:translateY(0)}}
+
+/* ---------- cards ---------- */
+.card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:18px; margin-bottom:14px;}
+.eyebrow{font-family:'Oswald'; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--text-faint); margin-bottom:6px; display:flex; align-items:center; gap:8px;}
+.eyebrow .dot{width:5px;height:5px;background:var(--accent); border-radius:50%;}
+
+/* today card */
+.today-card{position:relative; overflow:hidden; border:1px solid var(--line); border-radius:var(--radius); padding:22px 20px; background:
+  radial-gradient(140% 100% at 100% 0%, rgba(226,64,31,0.18), transparent 55%), var(--surface);}
+.today-date{color:var(--text-dim); font-size:13px; margin-bottom:2px;}
+.today-day{font-size:34px; line-height:1; font-weight:700;}
+.today-focus{color:var(--gold); font-size:14px; margin-top:6px; font-family:'Oswald'; letter-spacing:0.02em; text-transform:uppercase;}
+.today-meta{display:flex; gap:18px; margin-top:14px; color:var(--text-dim); font-size:12.5px;}
+.today-meta span b{color:var(--text); font-family:'Space Mono';}
+.start-btn{margin-top:18px; width:100%; padding:15px; background:var(--accent); border:none; color:#fff; border-radius:10px; font-family:'Oswald'; font-weight:600; font-size:16px; letter-spacing:0.06em; text-transform:uppercase; display:flex; align-items:center; justify-content:center; gap:8px;}
+.start-btn:active{background:#c1361b;}
+.start-btn.done{background:var(--good);}
+.start-btn.rest{background:var(--surface-2); color:var(--text-dim); border:1px solid var(--line);}
+.progress-track{height:6px; background:var(--bg-2); border-radius:6px; margin-top:14px; overflow:hidden;}
+.progress-fill{height:100%; background:var(--accent); border-radius:6px; transition:width .3s ease;}
+.progress-label{display:flex; justify-content:space-between; font-size:11.5px; color:var(--text-dim); margin-top:6px; font-family:'Space Mono';}
+
+/* stat grid */
+.stat-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:10px;}
+.stat-box{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:14px;}
+.stat-num{font-family:'Oswald'; font-size:26px; font-weight:600; color:var(--gold);}
+.stat-label{font-size:11px; color:var(--text-dim); text-transform:uppercase; letter-spacing:0.06em; margin-top:2px;}
+
+/* week strip */
+.week-strip{display:flex; justify-content:space-between; gap:6px;}
+.week-day{flex:1; display:flex; flex-direction:column; align-items:center; gap:6px;}
+.week-day .lbl{font-size:10px; color:var(--text-faint); text-transform:uppercase; letter-spacing:0.05em;}
+.week-pip{width:30px;height:30px;border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; border:1.5px solid var(--line); color:var(--text-faint);}
+.week-pip.done{background:var(--good); border-color:var(--good); color:#0d1a12; font-weight:700;}
+.week-pip.partial{background:transparent; border-color:var(--gold); color:var(--gold);}
+.week-pip.missed{background:transparent; border-color:var(--bad); color:var(--bad);}
+.week-pip.rest{background:transparent; border-color:var(--line); color:var(--text-faint); font-size:9px; font-family:'Oswald';}
+.week-pip.today{box-shadow:0 0 0 2px var(--accent);}
+
+/* bottom nav */
+.bottom-nav{
+  position:fixed; bottom:0; left:0; right:0; z-index:30;
+  background:rgba(18,17,16,0.92); backdrop-filter:blur(10px);
+  border-top:1px solid var(--line);
+  display:flex; padding-bottom:var(--safe-bottom);
+}
+.nav-btn{flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; padding:10px 4px 8px; background:none; border:none; color:var(--text-faint); font-size:10.5px; text-transform:uppercase; letter-spacing:0.04em; font-family:'Oswald';}
+.nav-btn .ic{font-size:19px;}
+.nav-btn.active{color:var(--accent);}
+
+/* section headers */
+.sec-title{display:flex; align-items:center; justify-content:space-between; margin:22px 0 10px;}
+.sec-title h2{font-size:18px;}
+.sub{color:var(--text-dim); font-size:13px; margin-top:2px;}
+
+/* buttons generic */
+.btn{padding:12px 16px; border-radius:9px; border:1px solid var(--line); background:var(--surface-2); color:var(--text); font-size:13.5px; font-family:'Oswald'; letter-spacing:0.03em; text-transform:uppercase;}
+.btn.primary{background:var(--accent); border-color:var(--accent); color:#fff;}
+.btn.ghost{background:transparent;}
+.btn.full{width:100%;}
+.btn-row{display:flex; gap:10px;}
+.btn:active{filter:brightness(0.9);}
+.btn:disabled{opacity:0.4;}
+
+/* ---------- TRAIN VIEW ---------- */
+.train-header{display:flex; align-items:center; justify-content:space-between; padding:10px 0 4px;}
+.train-close{background:var(--surface); border:1px solid var(--line); width:36px;height:36px;border-radius:50%; color:var(--text-dim); font-size:16px;}
+.train-progress{flex:1; margin:0 14px;}
+.exercise-card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:20px;}
+.ex-block{color:var(--accent); font-size:11px; text-transform:uppercase; letter-spacing:0.14em; font-family:'Oswald'; margin-bottom:4px;}
+.ex-name{font-size:24px; font-weight:600;}
+.ex-target{color:var(--text-dim); font-size:13.5px; margin-top:4px; font-family:'Space Mono';}
+.ex-lasttime{margin-top:12px; background:var(--bg-2); border-radius:8px; padding:10px 12px; font-size:12.5px; color:var(--text-dim); display:flex; justify-content:space-between;}
+.ex-lasttime b{color:var(--text);}
+.pr-banner{margin-top:12px; background:linear-gradient(90deg, rgba(212,162,76,0.18), transparent); border:1px solid var(--gold); color:var(--gold); border-radius:8px; padding:9px 12px; font-family:'Oswald'; font-size:12.5px; letter-spacing:0.06em; text-transform:uppercase;}
+
+.set-row{display:flex; align-items:center; gap:8px; margin-top:12px;}
+.set-idx{width:28px; font-family:'Space Mono'; color:var(--text-faint); font-size:13px;}
+.set-input{flex:1; background:var(--bg-2); border:1px solid var(--line); border-radius:8px; padding:11px 10px; color:var(--text); font-size:15px; font-family:'Space Mono'; text-align:center;}
+.set-input::placeholder{color:var(--text-faint);}
+.set-check{width:40px;height:40px; border-radius:8px; border:1px solid var(--line); background:var(--bg-2); color:var(--text-faint); font-size:16px;}
+.set-check.logged{background:var(--good); border-color:var(--good); color:#0d1a12;}
+
+.timer-wrap{margin-top:16px; text-align:center; background:var(--bg-2); border-radius:12px; padding:22px 16px;}
+.timer-round{font-family:'Oswald'; font-size:12px; letter-spacing:0.14em; color:var(--gold); text-transform:uppercase;}
+.timer-phase{font-family:'Oswald'; font-size:13px; letter-spacing:0.1em; color:var(--text-dim); text-transform:uppercase; margin-top:2px;}
+.timer-clock{font-family:'Space Mono'; font-size:52px; font-weight:700; margin:8px 0; letter-spacing:0.02em;}
+.timer-clock.rest{color:var(--good);}
+.timer-clock.work{color:var(--accent);}
+.timer-controls{display:flex; gap:8px; justify-content:center; margin-top:10px; flex-wrap:wrap;}
+.timer-controls button{background:var(--surface-2); border:1px solid var(--line); color:var(--text); border-radius:8px; padding:10px 14px; font-family:'Oswald'; font-size:12px; letter-spacing:0.05em; text-transform:uppercase;}
+.timer-controls button.main{background:var(--accent); border-color:var(--accent); color:#fff; flex:1;}
+
+.checklist-item{display:flex; align-items:center; gap:12px; padding:12px 0; border-bottom:1px solid var(--line);}
+.checklist-item:last-child{border-bottom:none;}
+.chk{width:26px;height:26px;border-radius:7px; border:1.5px solid var(--line); flex-shrink:0; display:flex;align-items:center;justify-content:center; color:transparent;}
+.chk.on{background:var(--good); border-color:var(--good); color:#0d1a12; font-weight:700;}
+.checklist-item .ci-name{flex:1; font-size:14.5px;}
+.checklist-item .ci-meta{color:var(--text-faint); font-size:12px; font-family:'Space Mono';}
+
+.notes-area{width:100%; margin-top:14px; background:var(--bg-2); border:1px solid var(--line); border-radius:8px; padding:10px 12px; color:var(--text); font-size:13.5px; min-height:60px; resize:vertical;}
+
+.complete-btn{width:100%; margin-top:18px; padding:15px; background:var(--accent); border:none; color:#fff; border-radius:10px; font-family:'Oswald'; font-weight:600; font-size:15px; letter-spacing:0.06em; text-transform:uppercase;}
+
+/* summary */
+.summary-hero{text-align:center; padding:26px 10px;}
+.summary-hero .big{font-family:'Oswald'; font-size:38px; color:var(--gold);}
+.summary-list{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px;}
+
+/* ---------- LEARN ---------- */
+.tech-card{background:var(--surface); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; overflow:hidden;}
+.tech-head{display:flex; align-items:center; justify-content:space-between; padding:14px 16px; }
+.tech-head .tname{font-family:'Oswald'; font-size:15px; letter-spacing:0.02em; text-transform:uppercase;}
+.tech-head .car{color:var(--text-faint); transition:transform .2s;}
+.tech-body{padding:0 16px 16px; display:none; font-size:13.5px; color:var(--text-dim); line-height:1.5;}
+.tech-body.open{display:block;}
+.tech-body .kp{margin:10px 0 0; padding-left:18px;}
+.tech-body a{color:var(--accent); text-decoration:none; font-family:'Oswald'; font-size:12.5px; letter-spacing:0.04em;}
+.tag-row{display:flex; gap:6px; margin-top:8px; flex-wrap:wrap;}
+.tag{font-size:10.5px; background:var(--bg-2); border:1px solid var(--line); color:var(--text-faint); padding:3px 8px; border-radius:20px; text-transform:uppercase; letter-spacing:0.04em;}
+
+/* ---------- PROGRESS ---------- */
+.pr-row{display:flex; justify-content:space-between; align-items:center; padding:12px 0; border-bottom:1px solid var(--line);}
+.pr-row:last-child{border-bottom:none;}
+.pr-name{font-size:13.5px;}
+.pr-val{font-family:'Space Mono'; color:var(--gold); font-size:14px;}
+.ach-row{display:flex; gap:12px; align-items:center; padding:12px 0; border-bottom:1px solid var(--line);}
+.ach-row:last-child{border-bottom:none;}
+.ach-badge{width:38px;height:38px; border-radius:10px; background:var(--bg-2); display:flex; align-items:center; justify-content:center; font-size:17px; flex-shrink:0;}
+.ach-badge.unlocked{background:linear-gradient(135deg, var(--gold), #a9772e);}
+.ach-title{font-family:'Oswald'; font-size:13.5px; text-transform:uppercase; letter-spacing:0.03em;}
+.ach-desc{font-size:11.5px; color:var(--text-faint); margin-top:1px;}
+.ach-row.locked .ach-title, .ach-row.locked .ach-desc{opacity:0.4;}
+
+.measure-grid{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:12px;}
+.mfield label{font-size:11px; color:var(--text-faint); text-transform:uppercase; letter-spacing:0.05em;}
+.mfield input{width:100%; margin-top:4px; background:var(--bg-2); border:1px solid var(--line); border-radius:8px; padding:10px; color:var(--text); font-family:'Space Mono'; font-size:14px;}
+.mchange{font-size:12px; color:var(--good); margin-top:2px; font-family:'Space Mono';}
+.mchange.neg{color:var(--bad);}
+
+/* ---------- CALENDAR ---------- */
+.cal-nav{display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;}
+.cal-nav button{background:var(--surface); border:1px solid var(--line); color:var(--text); width:34px;height:34px;border-radius:8px;}
+.cal-title{font-family:'Oswald'; font-size:16px; text-transform:uppercase; letter-spacing:0.04em;}
+.cal-grid{display:grid; grid-template-columns:repeat(7,1fr); gap:5px;}
+.cal-dow{text-align:center; font-size:10px; color:var(--text-faint); text-transform:uppercase; padding-bottom:4px;}
+.cal-cell{aspect-ratio:1; border-radius:8px; display:flex; flex-direction:column; align-items:center; justify-content:center; font-size:12px; background:var(--surface); border:1px solid var(--line); color:var(--text-dim); position:relative;}
+.cal-cell.empty{background:transparent; border:none;}
+.cal-cell.completed{background:rgba(95,167,119,0.18); border-color:var(--good); color:var(--text);}
+.cal-cell.partial{background:rgba(212,162,76,0.12); border-color:var(--gold); color:var(--text);}
+.cal-cell.missed{background:rgba(192,74,62,0.1); border-color:var(--bad); color:var(--text-dim);}
+.cal-cell.rest{color:var(--text-faint);}
+.cal-cell.today{box-shadow:0 0 0 2px var(--accent);}
+.cal-cell .dnum{font-family:'Space Mono'; font-weight:700;}
+.cal-detail{margin-top:16px;}
+
+/* modal */
+.modal-bg{position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:50; display:none; align-items:flex-end; justify-content:center;}
+.modal-bg.open{display:flex;}
+.modal{background:var(--bg); border:1px solid var(--line); border-radius:18px 18px 0 0; width:100%; max-width:640px; max-height:88vh; overflow-y:auto; padding:20px 18px calc(24px + var(--safe-bottom));}
+.modal-handle{width:36px;height:4px;background:var(--line); border-radius:4px; margin:0 auto 14px;}
+.modal h2{font-size:19px; margin-bottom:14px;}
+.close-x{position:absolute; top:16px; right:16px; background:var(--surface); border:1px solid var(--line); width:32px;height:32px;border-radius:50%; color:var(--text-dim);}
+
+.field{margin-bottom:14px;}
+.field label{font-size:12px; color:var(--text-faint); text-transform:uppercase; letter-spacing:0.05em; display:block; margin-bottom:5px;}
+.field textarea, .field input[type=text]{width:100%; background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:11px; color:var(--text); font-size:14px;}
+
+.empty-state{text-align:center; padding:36px 10px; color:var(--text-faint);}
+.empty-state .em-ic{font-size:30px; margin-bottom:8px;}
+.empty-state .em-title{font-family:'Oswald'; color:var(--text-dim); font-size:14px; text-transform:uppercase; letter-spacing:0.04em;}
+.empty-state .em-sub{font-size:12.5px; margin-top:4px;}
+
+.milestone-banner{border:1px solid var(--gold); background:linear-gradient(135deg, rgba(212,162,76,0.15), transparent); border-radius:12px; padding:14px 16px; margin-bottom:14px;}
+.milestone-banner .mt{font-family:'Oswald'; color:var(--gold); font-size:13px; text-transform:uppercase; letter-spacing:0.06em;}
+
+.toast{position:fixed; top:14px; left:50%; transform:translateX(-50%); background:var(--gold); color:#211803; padding:11px 20px; border-radius:30px; font-family:'Oswald'; font-size:13px; letter-spacing:0.03em; text-transform:uppercase; z-index:80; box-shadow:0 6px 18px rgba(0,0,0,0.4); opacity:0; pointer-events:none; transition:opacity .3s, transform .3s;}
+.toast.show{opacity:1; transform:translateX(-50%) translateY(6px);}
+
+.danger-zone{border:1px solid var(--bad); border-radius:12px; padding:14px; margin-top:8px;}
+.danger-zone .dz-title{color:var(--bad); font-family:'Oswald'; font-size:13px; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:8px;}
+
+a{color:var(--accent);}
+::-webkit-scrollbar{width:0;height:0;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand"><span class="mark"></span><span class="brand-text">RING<b>&</b>IRON</span></div>
+  <button class="icon-btn" id="settingsBtn" title="Data & settings">⚙</button>
+</div>
+
+<main>
+
+  <!-- ============ HOME ============ -->
+  <section class="view active" id="view-home">
+    <div class="today-card" id="todayCard"></div>
+
+    <div class="sec-title"><h2>Consistency</h2></div>
+    <div class="stat-grid" id="consistencyGrid"></div>
+
+    <div class="sec-title"><h2>This Week</h2></div>
+    <div class="card"><div class="week-strip" id="weekStrip"></div></div>
+
+    <div id="milestoneSlot"></div>
+  </section>
+
+  <!-- ============ TRAIN (list / runner) ============ -->
+  <section class="view" id="view-train">
+    <div id="trainIdle">
+      <div class="sec-title"><h2>Weekly Program</h2></div>
+      <div class="sub" style="margin-bottom:14px;">Your permanent six-day rotation. Tap a day to preview it.</div>
+      <div id="weekProgramList"></div>
+    </div>
+
+    <div id="trainRunner" style="display:none;">
+      <div class="train-header">
+        <button class="train-close" id="trainCloseBtn">✕</button>
+        <div class="train-progress">
+          <div class="progress-track"><div class="progress-fill" id="runnerBarFill"></div></div>
+          <div class="progress-label"><span id="runnerBarLabel">0 / 0</span><span id="runnerBarPct">0%</span></div>
+        </div>
+      </div>
+      <div id="runnerBody"></div>
+    </div>
+  </section>
+
+  <!-- ============ LEARN ============ -->
+  <section class="view" id="view-learn">
+    <div class="sec-title"><h2>Boxing</h2></div>
+    <div class="sub" style="margin-bottom:12px;">Fundamentals → punches → defense → combinations. Learn the shape before you learn the speed.</div>
+    <div id="boxingTechList"></div>
+
+    <div class="sec-title"><h2>Kicking</h2></div>
+    <div class="sub" style="margin-bottom:12px;">Technique first, power later.</div>
+    <div id="kickTechList"></div>
+  </section>
+
+  <!-- ============ PROGRESS ============ -->
+  <section class="view" id="view-progress">
+    <div class="sec-title"><h2>Lifetime Stats</h2></div>
+    <div class="stat-grid" id="lifetimeStats"></div>
+
+    <div class="sec-title"><h2>Strength Progress</h2></div>
+    <div class="card"><div id="strengthProgress"></div></div>
+
+    <div class="sec-title"><h2>Body Measurements</h2><button class="btn ghost" id="addMeasureBtn" style="padding:8px 12px; font-size:11px;">+ Log</button></div>
+    <div class="card"><div id="measureProgress"></div></div>
+
+    <div class="sec-title"><h2>Personal Records</h2></div>
+    <div class="card"><div id="prList"></div></div>
+
+    <div class="sec-title"><h2>Achievements</h2></div>
+    <div class="card"><div id="achList"></div></div>
+  </section>
+
+  <!-- ============ CALENDAR ============ -->
+  <section class="view" id="view-calendar">
+    <div class="cal-nav">
+      <button id="calPrev">‹</button>
+      <div class="cal-title" id="calTitle"></div>
+      <button id="calNext">›</button>
+    </div>
+    <div class="cal-grid" id="calDow"></div>
+    <div class="cal-grid" id="calGrid" style="margin-top:5px;"></div>
+    <div class="cal-detail" id="calDetail"></div>
+  </section>
+
+</main>
+
+<div class="bottom-nav">
+  <button class="nav-btn active" data-view="home"><span class="ic">⌂</span>Home</button>
+  <button class="nav-btn" data-view="train"><span class="ic">▶</span>Train</button>
+  <button class="nav-btn" data-view="learn"><span class="ic">◆</span>Learn</button>
+  <button class="nav-btn" data-view="progress"><span class="ic">▲</span>Progress</button>
+  <button class="nav-btn" data-view="calendar"><span class="ic">▦</span>Calendar</button>
+</div>
+
+<!-- measurement modal -->
+<div class="modal-bg" id="measureModalBg">
+  <div class="modal" style="position:relative;">
+    <button class="close-x" id="measureCloseX">✕</button>
+    <div class="modal-handle"></div>
+    <h2>Log Measurements</h2>
+    <div class="measure-grid" id="measureForm"></div>
+    <button class="btn primary full" id="saveMeasureBtn" style="margin-top:16px;">Save</button>
+  </div>
+</div>
+
+<!-- settings / data modal -->
+<div class="modal-bg" id="settingsModalBg">
+  <div class="modal" style="position:relative;">
+    <button class="close-x" id="settingsCloseX">✕</button>
+    <div class="modal-handle"></div>
+    <h2>Data & Settings</h2>
+
+    <div class="card" id="installCard" style="margin-bottom:16px;">
+      <div class="eyebrow"><span class="dot"></span>Install on your phone</div>
+      <button class="btn primary full" id="installBtn" style="display:none; margin-top:8px;">Install App</button>
+      <div id="installInstructions" style="margin-top:6px;">
+        <div class="sub" id="iosInstall" style="display:none;">
+          On iPhone/iPad: tap the <b>Share</b> icon in Safari, then <b>Add to Home Screen</b>. It launches full-screen like a normal app, and your data stays right where it is.
+        </div>
+        <div class="sub" id="androidInstall" style="display:none;">
+          On Android: open Chrome's menu (⋮) and tap <b>Add to Home Screen</b> or <b>Install App</b>. If you don't see an automatic install prompt, this manual option still works.
+        </div>
+        <div class="sub" id="genericInstall" style="display:none;">
+          Open this page in your phone's browser, then use the browser menu's <b>Add to Home Screen</b> option.
+        </div>
+      </div>
+    </div>
+
+    <div class="sub" style="margin-bottom:16px;">Your training history is stored on this device for your account. Back it up so you never lose it.</div>
+    <div class="btn-row">
+      <button class="btn full" id="exportBtn">Export backup</button>
+      <button class="btn full" id="importBtn">Restore backup</button>
+    </div>
+    <input type="file" id="importFile" accept=".json" style="display:none;">
+    <div class="danger-zone">
+      <div class="dz-title">Reset all data</div>
+      <div class="sub" style="margin-bottom:10px;">This permanently erases every workout, measurement, and record. This cannot be undone.</div>
+      <button class="btn full" id="resetBtn" style="border-color:var(--bad); color:var(--bad);">Erase everything</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+
+/* ============================================================
+   STORAGE HELPERS — persists in this browser via localStorage,
+   so your data survives refreshes, closing the tab, and
+   reopening the file later on this device.
+   ============================================================ */
+const STORAGE_PREFIX = 'ringiron:';
+async function sGet(key, fallback){
+  try{
+    const raw = localStorage.getItem(STORAGE_PREFIX + key);
+    if(raw === null || raw === undefined) return fallback;
+    return JSON.parse(raw);
+  }catch(e){ console.error('storage get failed', key, e); return fallback; }
+}
+async function sSet(key, value){
+  try{ localStorage.setItem(STORAGE_PREFIX + key, JSON.stringify(value)); }
+  catch(e){ console.error('storage set failed', key, e); toast('Could not save — storage may be full or blocked'); }
+}
+
+/* ============================================================
+   PROGRAM DATA — the permanent weekly plan
+   ============================================================ */
+const YT = q => `https://www.youtube.com/results?search_query=${encodeURIComponent(q)}`;
+
+const PROGRAM = {
+  1:{ name:'Monday', focus:'Boxing + Chest + Shoulders + Abs', blocks:[
+    {title:'Warm-Up', exercises:[
+      {id:'wu-jj', name:'Jumping Jacks', type:'quick', duration:60},
+      {id:'wu-hk', name:'High Knees', type:'quick', duration:60},
+      {id:'wu-ac', name:'Arm Circles', type:'quick', duration:30},
+      {id:'wu-bs', name:'Bodyweight Squats', type:'quick', reps:15},
+      {id:'wu-pu', name:'Push-Ups', type:'quick', reps:10},
+      {id:'wu-sb', name:'Light Shadowboxing', type:'quick', duration:120},
+    ]},
+    {title:'Boxing', exercises:[
+      {id:'box-mon', name:'Stance, Guard & Combinations', type:'rounds', rounds:4, work:120, rest:60, focus:'Stance · Guard · Jab · Cross · Hook · Uppercut · Combos · Footwork'},
+    ]},
+    {title:'Chest', exercises:[
+      {id:'floor-press', name:'Barbell Floor Press', type:'strength', sets:4, reps:'8–12'},
+      {id:'pushup', name:'Push-Ups', type:'strength', sets:3, reps:'AMRAP'},
+      {id:'db-floor-press', name:'Dumbbell Floor Press', type:'strength', sets:3, reps:'10–12'},
+      {id:'db-fly', name:'Dumbbell Fly', type:'strength', sets:3, reps:'12–15'},
+    ]},
+    {title:'Shoulders', exercises:[
+      {id:'ohp', name:'Barbell Overhead Press', type:'strength', sets:4, reps:'8–10'},
+      {id:'lat-raise', name:'Dumbbell Lateral Raise', type:'strength', sets:3, reps:'12–15'},
+      {id:'rear-delt', name:'Dumbbell Rear-Delt Raise', type:'strength', sets:3, reps:'12–15'},
+    ]},
+    {title:'Abs', exercises:[
+      {id:'leg-raise', name:'Leg Raises', type:'strength', sets:3, reps:'15'},
+      {id:'plank', name:'Plank', type:'timed', sets:3, duration:45},
+    ]},
+  ]},
+  2:{ name:'Tuesday', focus:'Legs + Kicking + Conditioning', blocks:[
+    {title:'Legs', exercises:[
+      {id:'squat', name:'Barbell Squat', type:'strength', sets:4, reps:'8–12'},
+      {id:'rdl', name:'Romanian Deadlift', type:'strength', sets:3, reps:'10–12'},
+      {id:'bulg-split', name:'Bulgarian Split Squat', type:'strength', sets:3, reps:'10 / leg'},
+      {id:'db-lunge', name:'Dumbbell Lunge', type:'strength', sets:3, reps:'12 / leg'},
+      {id:'calf-raise', name:'Calf Raise', type:'strength', sets:3, reps:'15–20'},
+    ]},
+    {title:'Kicking', exercises:[
+      {id:'kick-tue', name:'Kicking Technique & Combos', type:'rounds', rounds:4, work:120, rest:60, focus:'Stance · Front Kick · Teep · Roundhouse · Knee Strikes · Hip Rotation · Defense · Combos'},
+    ]},
+    {title:'Conditioning', exercises:[
+      {id:'cond-tue', name:'Conditioning Circuit', type:'rounds', rounds:4, work:40, rest:20, focus:'High Knees · Mountain Climbers · Jumping Squats'},
+    ]},
+  ]},
+  3:{ name:'Wednesday', focus:'Boxing + Back + Arms + Abs', blocks:[
+    {title:'Boxing', exercises:[
+      {id:'box-wed', name:'Progressive Boxing Rounds', type:'rounds', rounds:6, work:120, rest:60, focus:'R1 Stance/Movement · R2 Jab · R3 Jab+Cross · R4 Hooks+Uppercuts · R5 Combos · R6 Defense'},
+    ]},
+    {title:'Back', exercises:[
+      {id:'bb-row', name:'Barbell Bent-Over Row', type:'strength', sets:4, reps:'8–10'},
+      {id:'db-row', name:'One-Arm Dumbbell Row', type:'strength', sets:3, reps:'10–12 / side'},
+      {id:'rdl2', name:'Romanian Deadlift', type:'strength', sets:3, reps:'10'},
+    ]},
+    {title:'Arms', exercises:[
+      {id:'bb-curl', name:'Barbell Curl', type:'strength', sets:3, reps:'10–12'},
+      {id:'hammer-curl', name:'Dumbbell Hammer Curl', type:'strength', sets:3, reps:'12'},
+      {id:'cg-pushup', name:'Close-Grip Push-Ups', type:'strength', sets:3, reps:'AMRAP'},
+      {id:'db-tri-ext', name:'Dumbbell Overhead Triceps Extension', type:'strength', sets:3, reps:'12'},
+    ]},
+    {title:'Abs', exercises:[
+      {id:'rev-crunch', name:'Reverse Crunches', type:'strength', sets:3, reps:'15'},
+      {id:'bike-crunch', name:'Bicycle Crunches', type:'strength', sets:3, reps:'20'},
+      {id:'plank2', name:'Plank', type:'timed', sets:3, duration:45},
+    ]},
+  ]},
+  4:{ name:'Thursday', focus:'Legs + Shoulders + Kicking', blocks:[
+    {title:'Legs', exercises:[
+      {id:'squat2', name:'Barbell Squat', type:'strength', sets:4, reps:'8–12'},
+      {id:'rdl3', name:'Romanian Deadlift', type:'strength', sets:3, reps:'10'},
+      {id:'bulg-split2', name:'Bulgarian Split Squat', type:'strength', sets:3, reps:'10 / leg'},
+      {id:'calf-raise2', name:'Calf Raise', type:'strength', sets:3, reps:'15–20'},
+    ]},
+    {title:'Shoulders', exercises:[
+      {id:'ohp2', name:'Barbell Overhead Press', type:'strength', sets:4, reps:'8–10'},
+      {id:'lat-raise2', name:'Dumbbell Lateral Raise', type:'strength', sets:3, reps:'12–15'},
+      {id:'front-raise', name:'Dumbbell Front Raise', type:'strength', sets:3, reps:'12'},
+      {id:'rear-delt2', name:'Dumbbell Rear-Delt Raise', type:'strength', sets:3, reps:'12–15'},
+    ]},
+    {title:'Kicking', exercises:[
+      {id:'kick-thu', name:'Kicking + Shadow Kickboxing', type:'rounds', rounds:5, work:120, rest:60, focus:'Front Kick · Roundhouse · Knee Strikes · Switching Stance · Combos · Shadow Rounds'},
+    ]},
+  ]},
+  5:{ name:'Friday', focus:'Boxing + Chest + Arms + Abs', blocks:[
+    {title:'Boxing', exercises:[
+      {id:'box-fri', name:'Boxing Conditioning', type:'rounds', rounds:5, work:120, rest:60, focus:'Jab · Jab+Cross · Hooks · Uppercuts · Combos · Freestyle'},
+    ]},
+    {title:'Chest', exercises:[
+      {id:'floor-press2', name:'Barbell Floor Press', type:'strength', sets:4, reps:'8–12'},
+      {id:'pushup2', name:'Push-Ups', type:'strength', sets:3, reps:'AMRAP'},
+      {id:'db-press', name:'Dumbbell Press', type:'strength', sets:3, reps:'10–12'},
+    ]},
+    {title:'Arms', exercises:[
+      {id:'bb-curl2', name:'Barbell Curl', type:'strength', sets:3, reps:'10–12'},
+      {id:'hammer-curl2', name:'Hammer Curl', type:'strength', sets:3, reps:'12'},
+      {id:'db-tri-ext2', name:'Overhead Triceps Extension', type:'strength', sets:3, reps:'12'},
+      {id:'cg-pushup2', name:'Close-Grip Push-Ups', type:'strength', sets:3, reps:'AMRAP'},
+    ]},
+    {title:'Abs', exercises:[
+      {id:'leg-raise2', name:'Leg Raises', type:'strength', sets:3, reps:'15'},
+      {id:'rev-crunch2', name:'Reverse Crunches', type:'strength', sets:3, reps:'15'},
+      {id:'plank3', name:'Plank', type:'timed', sets:3, duration:45},
+    ]},
+  ]},
+  6:{ name:'Saturday', focus:'Full Body + Fight Conditioning', blocks:[
+    {title:'Full Body', exercises:[
+      {id:'squat3', name:'Squat', type:'strength', sets:3, reps:'10'},
+      {id:'pushup3', name:'Push-Ups', type:'strength', sets:3, reps:'AMRAP'},
+      {id:'bb-row2', name:'Barbell Row', type:'strength', sets:3, reps:'10'},
+      {id:'db-lunge2', name:'Dumbbell Lunge', type:'strength', sets:3, reps:'10 / leg'},
+      {id:'ohp3', name:'Overhead Press', type:'strength', sets:3, reps:'10'},
+      {id:'db-curl', name:'Dumbbell Curl', type:'strength', sets:3, reps:'12'},
+      {id:'calf-raise3', name:'Calf Raise', type:'strength', sets:3, reps:'15'},
+    ]},
+    {title:'Boxing', exercises:[
+      {id:'box-sat', name:'Footwork & Combos', type:'rounds', rounds:4, work:120, rest:60, focus:'Footwork · Jab · Cross · Hooks · Uppercuts · Slips · Rolls · Combos'},
+    ]},
+    {title:'Kicking', exercises:[
+      {id:'kick-sat', name:'Combo: Jab → Cross → Roundhouse → Move Away', type:'rounds', rounds:3, work:120, rest:60, focus:'Chained boxing-into-kicking combination'},
+    ]},
+    {title:'Conditioning', exercises:[
+      {id:'cond-sat', name:'Fight Conditioning Circuit', type:'rounds', rounds:4, work:40, rest:20, focus:'High Knees · Mountain Climbers · Burpees'},
+    ]},
+  ]},
+  0:{ name:'Sunday', focus:'Complete Rest Day', rest:true, blocks:[]},
+};
+
+const TECHNIQUES = {
+  boxing:[
+    {name:'Fighting Stance', pts:['Feet shoulder-width, lead foot slightly forward','Weight balanced, knees soft','Chin tucked, hands up'], q:'boxing fighting stance tutorial'},
+    {name:'Guard', pts:['Fists beside the chin, elbows in','Protect the chin and body without blocking your own vision'], q:'boxing guard position tutorial'},
+    {name:'Footwork & Movement', pts:['Small steps — never cross your feet','Push off the balls of your feet','Move forward, backward, and laterally without bouncing wildly'], q:'boxing footwork drills beginner'},
+    {name:'Jab', pts:['Lead hand extends straight, rotate fist on impact','Snap it back to guard immediately','Sets up everything else'], q:'how to throw a jab boxing'},
+    {name:'Cross', pts:['Rear hand, rotate hips and rear foot','Power comes from the ground up, not the arm'], q:'how to throw a cross boxing'},
+    {name:'Hook', pts:['Elbow bent ~90°, rotate at the hip','Pivot on the lead foot for a lead hook'], q:'how to throw a hook boxing'},
+    {name:'Uppercut', pts:['Drop slightly, drive upward through the hips','Short, compact motion — not a wide swing'], q:'how to throw an uppercut boxing'},
+    {name:'Defense — Block, Slip, Roll', pts:['Block: guard absorbs the shot','Slip: rotate head off the centerline','Roll: bend at the knees, circle under a hook'], q:'boxing defense slip roll block basics'},
+    {name:'Combinations', pts:['Start with jab-cross, then add hooks and uppercuts','Progress from 2-punch to 4-6 punch combos as it becomes automatic'], q:'beginner boxing combinations 1-2-3'},
+  ],
+  kick:[
+    {name:'Fighting Stance (Kickboxing)', pts:['Same base as boxing stance, slightly wider for kicks','Stay light on your feet to check or kick quickly'], q:'kickboxing stance tutorial'},
+    {name:'Front Kick', pts:['Drive the knee up, extend through the hip','Strike with the ball of the foot or heel'], q:'how to throw a front kick'},
+    {name:'Teep (Push Kick)', pts:['Thrust through the hip to push the opponent away','Keep it snappy — this is a range tool, not a power shot'], q:'muay thai teep push kick tutorial'},
+    {name:'Roundhouse Kick', pts:['Pivot fully on the standing foot','Rotate the hip through the target, swing the shin, not just the foot'], q:'roundhouse kick technique tutorial'},
+    {name:'Knee Strikes', pts:['Pull the target in or step in close','Drive the knee straight up through the hip'], q:'muay thai knee strike tutorial'},
+    {name:'Hip Rotation', pts:['Power for every kick comes from hip rotation, not the leg alone','Drill rotation slowly before adding speed'], q:'kick hip rotation drill'},
+    {name:'Switching Stance', pts:['Small hop to swap lead leg without losing balance','Used to set up power kicks from the rear leg'], q:'switch kick stance tutorial'},
+    {name:'Basic Kick Defense', pts:['Check: raise the shin to block a low kick','Catch: trap a kick and off-balance the opponent'], q:'checking kicks defense tutorial'},
+    {name:'Kick Combinations', pts:['Chain jab-cross into a roundhouse','Always finish a combo by moving off the centerline'], q:'kickboxing combinations beginner'},
+  ]
+};
+
+const ACHIEVEMENTS = [
+  {id:'first', title:'First Workout', desc:'You started your journey.', cond:s=>s.totalWorkouts>=1},
+  {id:'streak7', title:'7-Day Streak', desc:'One week of consistency.', cond:s=>s.longestStreak>=7},
+  {id:'streak30', title:'30-Day Streak', desc:'One month of discipline.', cond:s=>s.longestStreak>=30},
+  {id:'streak100', title:'100-Day Streak', desc:'Elite consistency.', cond:s=>s.longestStreak>=100},
+  {id:'w25', title:'25 Workouts', desc:'A quarter-century of sessions.', cond:s=>s.totalWorkouts>=25},
+  {id:'w100', title:'100 Workouts', desc:'100 training sessions completed.', cond:s=>s.totalWorkouts>=100},
+  {id:'w365', title:'365 Workouts', desc:'One year of training sessions.', cond:s=>s.totalWorkouts>=365},
+  {id:'rounds100', title:'100 Rounds', desc:'100 combat rounds thrown.', cond:s=>s.totalRounds>=100},
+  {id:'rounds500', title:'500 Rounds', desc:'500 combat rounds thrown.', cond:s=>s.totalRounds>=500},
+];
+
+/* ============================================================
+   STATE
+   ============================================================ */
+let logs = {};          // { 'YYYY-MM-DD': logEntry }
+let measurements = [];  // [{date, weight, chest, waist, armL, armR, thighL, thighR}]
+let prs = {};           // { exId: {weight, reps, date} }
+let unlocked = {};       // { achId: dateISO }
+let settings = {};
+
+let runner = null; // active workout runner state
+let timerState = null; // active timer engine state
+let calCursor = new Date(); calCursor.setDate(1);
+
+function pad(n){ return n<10 ? '0'+n : ''+n; }
+function dateStr(d){ return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()); }
+function todayStr(){ return dateStr(new Date()); }
+function parseDate(s){ const [y,m,d]=s.split('-').map(Number); return new Date(y, m-1, d); }
+function fmtLong(d){ return d.toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric', year:'numeric'}); }
+function fmtClock(sec){ sec=Math.max(0,Math.round(sec)); const m=Math.floor(sec/60), s=sec%60; return pad(m)+':'+pad(s); }
+
+function dayExerciseList(dayIdx){
+  const day = PROGRAM[dayIdx];
+  if(!day || day.rest) return [];
+  let list=[];
+  day.blocks.forEach(b=> b.exercises.forEach(ex=> list.push(Object.assign({blockTitle:b.title}, ex))));
+  return list;
+}
+
+function estDuration(dayIdx){
+  const list = dayExerciseList(dayIdx);
+  let mins=0;
+  list.forEach(ex=>{
+    if(ex.type==='quick') mins += (ex.duration? ex.duration/60 : 1);
+    else if(ex.type==='strength') mins += ex.sets*1.5;
+    else if(ex.type==='timed') mins += (ex.sets*ex.duration)/60 + ex.sets*0.5;
+    else if(ex.type==='rounds') mins += (ex.rounds*(ex.work+ex.rest))/60;
+  });
+  return Math.round(mins);
+}
+
+function emptyLog(dateS, dayIdx){
+  const isRest = PROGRAM[dayIdx].rest;
+  const list = dayExerciseList(dayIdx);
+  return {
+    date:dateS, dayIdx, status: isRest?'rest':'pending',
+    exercises:{}, completedCount:0, totalCount:list.length,
+    startedAt:null, completedAt:null, durationMin:0, notes:'', late:false
+  };
+}
+function getLog(dateS){
+  const dayIdx = parseDate(dateS).getDay();
+  if(!logs[dateS]) logs[dateS] = emptyLog(dateS, dayIdx);
+  return logs[dateS];
+}
+function saveLogs(){ sSet('logs', logs); }
+
+/* ---------- computed stats ---------- */
+function computeStats(){
+  const dates = Object.keys(logs).sort();
+  let totalWorkouts=0, totalRounds=0, totalMinutes=0;
+  dates.forEach(d=>{
+    const l=logs[d];
+    if(l.status==='completed' || l.status==='partial'){
+      totalWorkouts++;
+      totalMinutes += (l.durationMin||0);
+      Object.values(l.exercises).forEach(e=>{ if(e.roundsCompleted) totalRounds+=e.roundsCompleted; });
+    }
+  });
+  return {totalWorkouts, totalRounds, totalMinutes};
+}
+
+function statusForDate(dateS){
+  const dayIdx = parseDate(dateS).getDay();
+  if(PROGRAM[dayIdx].rest) return 'rest';
+  const l = logs[dateS];
+  if(!l || l.status==='pending'){
+    return dateS < todayStr() ? 'missed' : (dateS===todayStr() ? 'today' : 'future');
+  }
+  return l.status; // completed | partial
+}
+
+function currentStreak(){
+  let d = new Date(); d.setHours(0,0,0,0);
+  let streak=0; let first=true;
+  while(true){
+    const ds = dateStr(d);
+    const dayIdx = d.getDay();
+    if(PROGRAM[dayIdx].rest){ d.setDate(d.getDate()-1); continue; }
+    const st = statusForDate(ds);
+    if(first && (st==='today' || st==='future')){ first=false; d.setDate(d.getDate()-1); continue; }
+    first=false;
+    if(st==='completed' || st==='partial'){ streak++; d.setDate(d.getDate()-1); }
+    else break;
+  }
+  return streak;
+}
+
+function longestStreak(){
+  const dates = Object.keys(logs).sort();
+  if(dates.length===0) return 0;
+  let start = parseDate(dates[0]);
+  let end = new Date();
+  let cur=0, best=0;
+  for(let d=new Date(start); d<=end; d.setDate(d.getDate()+1)){
+    const ds = dateStr(d);
+    const dayIdx = d.getDay();
+    if(PROGRAM[dayIdx].rest) continue;
+    const l = logs[ds];
+    const done = l && (l.status==='completed' || l.status==='partial');
+    if(done){ cur++; best=Math.max(best,cur); } else { cur=0; }
+  }
+  return best;
+}
+
+function weekBounds(ref){
+  const d = new Date(ref); const day = d.getDay(); // 0 sun .. 6 sat
+  const diffToMon = (day===0? -6 : 1-day);
+  const mon = new Date(d); mon.setDate(d.getDate()+diffToMon); mon.setHours(0,0,0,0);
+  const sun = new Date(mon); sun.setDate(mon.getDate()+6);
+  return [mon,sun];
+}
+
+function weekCompletedCount(ref){
+  const [mon] = weekBounds(ref);
+  let count=0;
+  for(let i=0;i<7;i++){
+    const d = new Date(mon); d.setDate(mon.getDate()+i);
+    const ds = dateStr(d);
+    const l = logs[ds];
+    if(l && (l.status==='completed' || l.status==='partial')) count++;
+  }
+  return count;
+}
+
+function monthCompletedCount(ref){
+  const y=ref.getFullYear(), m=ref.getMonth();
+  let count=0;
+  Object.keys(logs).forEach(ds=>{
+    const d=parseDate(ds);
+    if(d.getFullYear()===y && d.getMonth()===m){
+      const l=logs[ds];
+      if(l.status==='completed'||l.status==='partial') count++;
+    }
+  });
+  return count;
+}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+document.querySelectorAll('.nav-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=> switchView(btn.dataset.view));
+});
+function switchView(name){
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+  document.getElementById('view-'+name).classList.add('active');
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.toggle('active', b.dataset.view===name));
+  if(name==='progress') renderProgress();
+  if(name==='calendar') renderCalendar();
+  if(name==='learn') renderLearn();
+  if(name==='train' && !runner) renderTrainIdle();
+  window.scrollTo(0,0);
+}
+
+function toast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg;
+  t.classList.add('show');
+  clearTimeout(t._h);
+  t._h=setTimeout(()=>t.classList.remove('show'), 2400);
+}
+
+/* ============================================================
+   HOME RENDER
+   ============================================================ */
+function renderHome(){
+  const now = new Date();
+  const ds = todayStr();
+  const dayIdx = now.getDay();
+  const day = PROGRAM[dayIdx];
+  const log = getLog(ds);
+  const card = document.getElementById('todayCard');
+
+  if(day.rest){
+    card.innerHTML = `
+      <div class="today-date">${now.toLocaleDateString('en-US',{weekday:'long', month:'long', day:'numeric'})}</div>
+      <div class="today-day">Rest Day</div>
+      <div class="today-focus">Recovery — walk, stretch, hydrate, sleep well</div>
+      <button class="start-btn rest" disabled>Recovery Day — No Workout Scheduled</button>
+    `;
+  } else {
+    const list = dayExerciseList(dayIdx);
+    const total = list.length;
+    const done = log.completedCount || 0;
+    const pct = total? Math.round(done/total*100) : 0;
+    const isDone = log.status==='completed';
+    card.innerHTML = `
+      <div class="today-date">${now.toLocaleDateString('en-US',{weekday:'long', month:'long', day:'numeric'})}</div>
+      <div class="today-day">${day.name}</div>
+      <div class="today-focus">${day.focus}</div>
+      <div class="today-meta">
+        <span>Exercises <b>${total}</b></span>
+        <span>Est. <b>${estDuration(dayIdx)}</b> min</span>
+      </div>
+      <button class="start-btn ${isDone?'done':''}" id="startWorkoutBtn">${isDone? '✓ Workout Complete — Review' : (done>0? 'Continue Workout' : 'Start Workout')}</button>
+      <div class="progress-track"><div class="progress-fill" id="todayFill" style="width:${pct}%"></div></div>
+      <div class="progress-label"><span>${done} / ${total} exercises</span><span>${pct}% complete</span></div>
+    `;
+    document.getElementById('startWorkoutBtn').addEventListener('click', ()=>{
+      switchView('train');
+      startRunner(ds, dayIdx);
+    });
+  }
+
+  // consistency grid
+  const cs = currentStreak(), ls = longestStreak();
+  const stats = computeStats();
+  const wk = weekCompletedCount(now);
+  const mo = monthCompletedCount(now);
+  document.getElementById('consistencyGrid').innerHTML = `
+    <div class="stat-box"><div class="stat-num">${cs}</div><div class="stat-label">Current Streak</div></div>
+    <div class="stat-box"><div class="stat-num">${ls}</div><div class="stat-label">Longest Streak</div></div>
+    <div class="stat-box"><div class="stat-num">${wk}/6</div><div class="stat-label">This Week</div></div>
+    <div class="stat-box"><div class="stat-num">${mo}</div><div class="stat-label">This Month</div></div>
+  `;
+
+  // week strip (Mon..Sun)
+  const [mon] = weekBounds(now);
+  const strip = document.getElementById('weekStrip');
+  let html='';
+  const labels=['M','T','W','T','F','S','S'];
+  for(let i=0;i<7;i++){
+    const d = new Date(mon); d.setDate(mon.getDate()+i);
+    const dsx = dateStr(d);
+    const st = statusForDate(dsx);
+    let cls='', sym='○';
+    if(st==='completed'){cls='done'; sym='✓';}
+    else if(st==='partial'){cls='partial'; sym='◐';}
+    else if(st==='missed'){cls='missed'; sym='✕';}
+    else if(st==='rest'){cls='rest'; sym='REST';}
+    else if(st==='future'){cls=''; sym='○';}
+    else if(st==='today'){cls=''; sym='○';}
+    const isToday = dsx===ds;
+    html += `<div class="week-day"><div class="lbl">${labels[i]}</div><div class="week-pip ${cls} ${isToday?'today':''}">${sym}</div></div>`;
+  }
+  strip.innerHTML = html;
+
+  // 8-week milestone
+  renderMilestone();
+}
+
+function renderMilestone(){
+  const slot = document.getElementById('milestoneSlot');
+  const start = settings.startDate ? parseDate(settings.startDate) : null;
+  if(!start){ slot.innerHTML=''; return; }
+  const days = Math.floor((new Date()-start)/86400000);
+  if(days>=56 && !settings.milestoneShown){
+    const stats = computeStats();
+    slot.innerHTML = `
+      <div class="milestone-banner">
+        <div class="mt">Your First 8 Weeks</div>
+        <div class="sub" style="margin-top:6px;">${stats.totalWorkouts} workouts completed · ${currentStreak()}-day current streak · ${longestStreak()}-day longest streak. The journey continues — next week's program starts right on schedule.</div>
+      </div>`;
+  } else {
+    slot.innerHTML='';
+  }
+}
+
+/* ============================================================
+   TRAIN — idle list
+   ============================================================ */
+function renderTrainIdle(){
+  document.getElementById('trainIdle').style.display='block';
+  document.getElementById('trainRunner').style.display='none';
+  const wrap = document.getElementById('weekProgramList');
+  let html='';
+  for(let i=1;i<=6;i++){
+    const day = PROGRAM[i];
+    const list = dayExerciseList(i);
+    const isToday = new Date().getDay()===i;
+    html += `<div class="card" style="${isToday?'border-color:var(--accent);':''}">
+      <div class="eyebrow"><span class="dot"></span>${day.name}${isToday?' · TODAY':''}</div>
+      <div style="font-family:'Oswald'; font-size:16px; text-transform:uppercase;">${day.focus}</div>
+      <div class="sub" style="margin-top:4px;">${list.length} exercises · ~${estDuration(i)} min</div>
+      <div class="btn-row" style="margin-top:12px;">
+        <button class="btn ghost full" data-preview="${i}">Preview</button>
+        <button class="btn primary full" data-goto="${i}">${isToday?'Start':'Train This Day'}</button>
+      </div>
+      <div class="preview-body" id="preview-${i}" style="display:none; margin-top:12px; border-top:1px solid var(--line); padding-top:12px;"></div>
+    </div>`;
+  }
+  const restList = dayExerciseList(0);
+  html += `<div class="card"><div class="eyebrow"><span class="dot"></span>Sunday</div>
+    <div style="font-family:'Oswald'; font-size:16px; text-transform:uppercase;">Complete Rest Day</div>
+    <div class="sub" style="margin-top:4px;">Walk · Stretch · Mobility · Hydration · Sleep. Doesn't break your streak.</div></div>`;
+  wrap.innerHTML = html;
+
+  wrap.querySelectorAll('[data-preview]').forEach(b=>b.addEventListener('click', ()=>{
+    const i=b.dataset.preview;
+    const el = document.getElementById('preview-'+i);
+    const open = el.style.display!=='none';
+    if(open){ el.style.display='none'; b.textContent='Preview'; return; }
+    const day = PROGRAM[i];
+    el.innerHTML = day.blocks.map(bl=>`
+      <div style="margin-bottom:10px;">
+        <div style="font-family:'Oswald'; font-size:11px; letter-spacing:0.1em; color:var(--gold); text-transform:uppercase;">${bl.title}</div>
+        ${bl.exercises.map(ex=>`<div style="font-size:13px; color:var(--text-dim); padding:4px 0;">${ex.name} ${exTargetShort(ex)}</div>`).join('')}
+      </div>`).join('');
+    el.style.display='block'; b.textContent='Hide';
+  }));
+  wrap.querySelectorAll('[data-goto]').forEach(b=>b.addEventListener('click', ()=>{
+    const i=Number(b.dataset.goto);
+    const isToday = new Date().getDay()===i;
+    const ds = isToday? todayStr() : nextDateForDayIdx(i);
+    startRunner(ds, i);
+  }));
+}
+function exTargetShort(ex){
+  if(ex.type==='strength') return `— ${ex.sets}×${ex.reps}`;
+  if(ex.type==='timed') return `— ${ex.sets}×${ex.duration}s`;
+  if(ex.type==='rounds') return `— ${ex.rounds} rounds`;
+  if(ex.type==='quick') return ex.duration? `— ${ex.duration}s` : `— ${ex.reps} reps`;
+  return '';
+}
+function nextDateForDayIdx(idx){
+  let d = new Date();
+  for(let i=0;i<8;i++){ if(d.getDay()===idx) return dateStr(d); d.setDate(d.getDate()+1); }
+  return dateStr(new Date());
+}
+
+/* ============================================================
+   WORKOUT RUNNER
+   ============================================================ */
+function startRunner(dateS, dayIdx){
+  const list = dayExerciseList(dayIdx);
+  const log = getLog(dateS);
+  if(!log.startedAt) log.startedAt = Date.now();
+  log.totalCount = list.length;
+  saveLogs();
+  runner = {dateS, dayIdx, list, idx: firstIncompleteIdx(log, list)};
+  document.getElementById('trainIdle').style.display='none';
+  document.getElementById('trainRunner').style.display='block';
+  document.getElementById('trainCloseBtn').onclick = ()=>{ stopTimer(); runner=null; switchView('train'); renderTrainIdle(); renderHome(); };
+  renderRunnerStep();
+}
+function firstIncompleteIdx(log, list){
+  for(let i=0;i<list.length;i++){ if(!log.exercises[list[i].id] || !log.exercises[list[i].id].done) return i; }
+  return list.length; // all done -> summary
+}
+
+function renderRunnerStep(){
+  stopTimer();
+  const {dateS, dayIdx, list, idx} = runner;
+  const log = getLog(dateS);
+  const total = list.length;
+  const doneCount = list.filter(ex=> log.exercises[ex.id] && log.exercises[ex.id].done).length;
+  document.getElementById('runnerBarFill').style.width = (total? doneCount/total*100:0)+'%';
+  document.getElementById('runnerBarLabel').textContent = `${doneCount} / ${total}`;
+  document.getElementById('runnerBarPct').textContent = (total? Math.round(doneCount/total*100):0)+'%';
+
+  if(idx>=total){ renderRunnerSummary(); return; }
+  const ex = list[idx];
+  const body = document.getElementById('runnerBody');
+
+  if(ex.type==='strength') body.innerHTML = strengthCardHtml(ex, dateS);
+  else if(ex.type==='timed') body.innerHTML = timedCardHtml(ex);
+  else if(ex.type==='rounds') body.innerHTML = roundsCardHtml(ex);
+  else if(ex.type==='quick') body.innerHTML = quickCardHtml(ex);
+
+  wireRunnerCard(ex);
+}
+
+function lastTimeText(exId, excludeDate){
+  const dates = Object.keys(logs).filter(d=>d!==excludeDate).sort().reverse();
+  for(const d of dates){
+    const e = logs[d].exercises[exId];
+    if(e && e.sets && e.sets.length){
+      const top = e.sets[e.sets.length-1];
+      return `${top.weight||0}kg × ${top.reps||0}`;
+    }
+    if(e && e.duration){ return `${e.duration}s`; }
+  }
+  return null;
+}
+
+function strengthCardHtml(ex, dateS){
+  const log = getLog(dateS);
+  const existing = log.exercises[ex.id] || {sets:[]};
+  const last = lastTimeText(ex.id, dateS);
+  const pr = prs[ex.id];
+  let setsHtml='';
+  for(let i=0;i<ex.sets;i++){
+    const s = existing.sets[i] || {};
+    setsHtml += `<div class="set-row" data-set="${i}">
+      <div class="set-idx">#${i+1}</div>
+      <input class="set-input w-in" type="number" inputmode="decimal" placeholder="kg" value="${s.weight!=null?s.weight:''}">
+      <input class="set-input r-in" type="number" inputmode="numeric" placeholder="reps" value="${s.reps!=null?s.reps:''}">
+      <button class="set-check ${s.logged?'logged':''}" data-i="${i}">✓</button>
+    </div>`;
+  }
+  return `
+    <div class="exercise-card">
+      <div class="ex-block">${ex.blockTitle}</div>
+      <div class="ex-name">${ex.name}</div>
+      <div class="ex-target">${ex.sets} sets × ${ex.reps} reps</div>
+      ${last?`<div class="ex-lasttime"><span>Last time</span><b>${last}</b></div>`:''}
+      ${pr?`<div class="pr-banner">PR — ${pr.weight}kg × ${pr.reps}</div>`:''}
+      <div id="prSlot"></div>
+      ${setsHtml}
+      <textarea class="notes-area" id="exNotes" placeholder="Notes (optional)">${existing.notes||''}</textarea>
+      <button class="complete-btn" id="completeExBtn">Complete Exercise</button>
+    </div>`;
+}
+
+function timedCardHtml(ex){
+  const log = getLog(runner.dateS);
+  const existing = log.exercises[ex.id] || {setsDone:0};
+  return `
+    <div class="exercise-card">
+      <div class="ex-block">${ex.blockTitle}</div>
+      <div class="ex-name">${ex.name}</div>
+      <div class="ex-target">${ex.sets} sets × ${ex.duration}s</div>
+      <div class="timer-wrap">
+        <div class="timer-round" id="tRound">SET ${Math.min((existing.setsDone||0)+1, ex.sets)} / ${ex.sets}</div>
+        <div class="timer-clock work" id="tClock">${fmtClock(ex.duration)}</div>
+        <div class="timer-controls">
+          <button class="main" id="tStart">Start</button>
+          <button id="tReset">Reset</button>
+          <button id="tSkip">Mark Set Done</button>
+        </div>
+      </div>
+      <textarea class="notes-area" id="exNotes" placeholder="Notes (optional)">${existing.notes||''}</textarea>
+      <button class="complete-btn" id="completeExBtn">Complete Exercise</button>
+    </div>`;
+}
+
+function roundsCardHtml(ex){
+  const log = getLog(runner.dateS);
+  const existing = log.exercises[ex.id] || {roundsCompleted:0};
+  return `
+    <div class="exercise-card">
+      <div class="ex-block">${ex.blockTitle}</div>
+      <div class="ex-name">${ex.name}</div>
+      <div class="ex-target">${ex.rounds} rounds · ${ex.work}s work / ${ex.rest}s rest</div>
+      <div class="sub" style="margin-top:6px;">${ex.focus}</div>
+      <div class="timer-wrap">
+        <div class="timer-round" id="tRound">ROUND 1 / ${ex.rounds}</div>
+        <div class="timer-phase" id="tPhase">WORK</div>
+        <div class="timer-clock work" id="tClock">${fmtClock(ex.work)}</div>
+        <div class="timer-controls">
+          <button class="main" id="tStart">Start</button>
+          <button id="tPause" style="display:none;">Pause</button>
+          <button id="tReset">Reset</button>
+          <button id="tNext">Next Round</button>
+        </div>
+      </div>
+      <textarea class="notes-area" id="exNotes" placeholder="Notes (optional)">${existing.notes||''}</textarea>
+      <button class="complete-btn" id="completeExBtn">Complete Exercise</button>
+    </div>`;
+}
+
+function quickCardHtml(ex){
+  const log = getLog(runner.dateS);
+  const existing = log.exercises[ex.id];
+  return `
+    <div class="exercise-card">
+      <div class="ex-block">${ex.blockTitle}</div>
+      <div class="ex-name">${ex.name}</div>
+      <div class="ex-target">${ex.duration? ex.duration+'s' : ex.reps+' reps'}</div>
+      <div class="checklist-item" style="margin-top:14px;">
+        <div class="chk ${existing&&existing.done?'on':''}" id="quickChk">${existing&&existing.done?'✓':''}</div>
+        <div class="ci-name">Mark complete</div>
+      </div>
+      <button class="complete-btn" id="completeExBtn">Complete Exercise</button>
+    </div>`;
+}
+
+function wireRunnerCard(ex){
+  const {dateS} = runner;
+  const log = getLog(dateS);
+
+  if(ex.type==='strength'){
+    document.querySelectorAll('.set-check').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const row = btn.closest('.set-row');
+        const w = parseFloat(row.querySelector('.w-in').value)||0;
+        const r = parseFloat(row.querySelector('.r-in').value)||0;
+        if(!log.exercises[ex.id]) log.exercises[ex.id] = {sets:[], done:false, notes:''};
+        const i = Number(btn.dataset.i);
+        log.exercises[ex.id].sets[i] = {weight:w, reps:r, logged:true};
+        btn.classList.add('logged');
+        saveLogs();
+        checkPR(ex.id, w, r);
+      });
+    });
+  }
+  if(ex.type==='timed'){
+    setupTimedEngine(ex);
+  }
+  if(ex.type==='rounds'){
+    setupRoundsEngine(ex);
+  }
+  if(ex.type==='quick'){
+    const chk = document.getElementById('quickChk');
+    chk.addEventListener('click', ()=>{
+      const on = chk.classList.toggle('on');
+      chk.textContent = on?'✓':'';
+      if(!log.exercises[ex.id]) log.exercises[ex.id]={};
+      log.exercises[ex.id].done = on;
+      saveLogs();
+    });
+  }
+
+  document.getElementById('completeExBtn').addEventListener('click', ()=> completeExercise(ex));
+}
+
+function checkPR(exId, weight, reps){
+  if(weight<=0) return;
+  const cur = prs[exId];
+  if(!cur || weight>cur.weight || (weight===cur.weight && reps>cur.reps)){
+    prs[exId] = {weight, reps, date: todayStr()};
+    sSet('prs', prs);
+    document.getElementById('prSlot').innerHTML = `<div class="pr-banner">NEW PERSONAL RECORD — ${weight}kg × ${reps}</div>`;
+    toast('New Personal Record!');
+  }
+}
+
+/* ---------- generic timer engine (used for timed sets) ---------- */
+function setupTimedEngine(ex){
+  const log = getLog(runner.dateS);
+  if(!log.exercises[ex.id]) log.exercises[ex.id]={setsDone:0, notes:''};
+  let setsDone = log.exercises[ex.id].setsDone||0;
+  let remaining = ex.duration;
+  let running=false, iv=null;
+
+  function render(){
+    document.getElementById('tRound').textContent = `SET ${Math.min(setsDone+1, ex.sets)} / ${ex.sets}`;
+    document.getElementById('tClock').textContent = fmtClock(remaining);
+    document.getElementById('tStart').textContent = running? 'Pause' : 'Start';
+  }
+  function tick(){
+    remaining--;
+    if(remaining<=0){
+      clearInterval(iv); running=false;
+      setsDone = Math.min(setsDone+1, ex.sets);
+      log.exercises[ex.id].setsDone = setsDone; saveLogs();
+      remaining = ex.duration;
+      if(navigator.vibrate) navigator.vibrate(200);
+    }
+    render();
+  }
+  document.getElementById('tStart').onclick = ()=>{
+    if(setsDone>=ex.sets) return;
+    running = !running;
+    if(running) iv=setInterval(tick,1000); else clearInterval(iv);
+    render();
+  };
+  document.getElementById('tReset').onclick = ()=>{ clearInterval(iv); running=false; remaining=ex.duration; render(); };
+  document.getElementById('tSkip').onclick = ()=>{
+    clearInterval(iv); running=false;
+    setsDone = Math.min(setsDone+1, ex.sets);
+    log.exercises[ex.id].setsDone = setsDone; saveLogs();
+    remaining = ex.duration; render();
+  };
+  timerState = {stop: ()=>clearInterval(iv)};
+  render();
+}
+
+/* ---------- round timer engine (boxing/kicking/conditioning) ---------- */
+function setupRoundsEngine(ex){
+  const log = getLog(runner.dateS);
+  if(!log.exercises[ex.id]) log.exercises[ex.id]={roundsCompleted:0, notes:''};
+  let round = Math.min((log.exercises[ex.id].roundsCompleted||0)+1, ex.rounds);
+  let phase='work';
+  let remaining = ex.work;
+  let running=false, iv=null;
+
+  const clockEl = ()=>document.getElementById('tClock');
+  const roundEl = ()=>document.getElementById('tRound');
+  const phaseEl = ()=>document.getElementById('tPhase');
+
+  function render(){
+    roundEl().textContent = `ROUND ${round} / ${ex.rounds}`;
+    phaseEl().textContent = phase==='work' ? 'WORK' : 'REST';
+    const c = clockEl();
+    c.textContent = fmtClock(remaining);
+    c.className = 'timer-clock ' + (phase==='work' ? 'work':'rest');
+    document.getElementById('tStart').style.display = running? 'none':'flex';
+    document.getElementById('tPause').style.display = running? 'flex':'none';
+  }
+  function completeRound(){
+    log.exercises[ex.id].roundsCompleted = round;
+    saveLogs();
+  }
+  function tick(){
+    remaining--;
+    if(remaining<=0){
+      if(navigator.vibrate) navigator.vibrate(300);
+      if(phase==='work'){
+        completeRound();
+        if(round>=ex.rounds){ clearInterval(iv); running=false; phase='work'; remaining=0; render(); return; }
+        phase='rest'; remaining=ex.rest;
+      } else {
+        phase='work'; round++; remaining=ex.work;
+      }
+    }
+    render();
+  }
+  document.getElementById('tStart').onclick = ()=>{
+    if(round>ex.rounds) return;
+    running=true; iv=setInterval(tick,1000); render();
+  };
+  document.getElementById('tPause').onclick = ()=>{ running=false; clearInterval(iv); render(); };
+  document.getElementById('tReset').onclick = ()=>{ clearInterval(iv); running=false; round=Math.min((log.exercises[ex.id].roundsCompleted||0)+1, ex.rounds); phase='work'; remaining=ex.work; render(); };
+  document.getElementById('tNext').onclick = ()=>{
+    clearInterval(iv); running=false;
+    if(phase==='work') completeRound();
+    if(round<ex.rounds){ round++; phase='work'; remaining=ex.work; }
+    else { remaining=0; }
+    render();
+  };
+  timerState = {stop: ()=>clearInterval(iv)};
+  render();
+}
+
+function stopTimer(){ if(timerState){ timerState.stop(); timerState=null; } }
+
+function completeExercise(ex){
+  stopTimer();
+  const {dateS, list} = runner;
+  const log = getLog(dateS);
+  if(!log.exercises[ex.id]) log.exercises[ex.id] = {};
+  log.exercises[ex.id].done = true;
+  const notesEl = document.getElementById('exNotes');
+  if(notesEl) log.exercises[ex.id].notes = notesEl.value;
+  log.completedCount = list.filter(e=> log.exercises[e.id] && log.exercises[e.id].done).length;
+  log.status = log.completedCount>=list.length ? 'completed' : 'partial';
+  saveLogs();
+  runner.idx++;
+  renderRunnerStep();
+}
+
+function renderRunnerSummary(){
+  const {dateS, dayIdx, list} = runner;
+  const log = getLog(dateS);
+  const scheduled = dateS === todayStr();
+  if(!scheduled) log.late = true;
+  log.completedAt = Date.now();
+  const mins = log.startedAt ? Math.round((log.completedAt-log.startedAt)/60000) : estDuration(dayIdx);
+  log.durationMin = mins || estDuration(dayIdx);
+  log.status = log.completedCount>=list.length ? 'completed' : 'partial';
+  saveLogs();
+
+  const rounds = list.filter(e=>e.type==='rounds').reduce((a,e)=> a + ((log.exercises[e.id]&&log.exercises[e.id].roundsCompleted)||0), 0);
+
+  document.getElementById('runnerBody').innerHTML = `
+    <div class="exercise-card">
+      <div class="summary-hero">
+        <div class="eyebrow" style="justify-content:center;"><span class="dot"></span>${log.status==='completed'?'Workout Complete':'Workout Saved'}</div>
+        <div class="big">${log.completedCount} / ${list.length}</div>
+        <div class="sub">exercises completed</div>
+      </div>
+      <div class="summary-list">
+        <div class="stat-box"><div class="stat-num">${log.durationMin}</div><div class="stat-label">Minutes</div></div>
+        <div class="stat-box"><div class="stat-num">${rounds}</div><div class="stat-label">Rounds Thrown</div></div>
+      </div>
+      ${log.late? `<div class="sub" style="margin-top:12px;">Logged as a missed workout completed late — the original scheduled date is preserved.</div>`:''}
+      <button class="complete-btn" id="finishRunnerBtn">Done</button>
+    </div>`;
+  document.getElementById('runnerBarFill').style.width='100%';
+  document.getElementById('runnerBarLabel').textContent = `${log.completedCount} / ${list.length}`;
+  document.getElementById('runnerBarPct').textContent = '100%';
+
+  document.getElementById('finishRunnerBtn').addEventListener('click', ()=>{
+    runner=null;
+    checkAchievements();
+    switchView('home');
+    renderTrainIdle();
+  });
+}
+
+/* ============================================================
+   LEARN
+   ============================================================ */
+function renderLearn(){
+  document.getElementById('boxingTechList').innerHTML = TECHNIQUES.boxing.map((t,i)=>techHtml(t,'box'+i)).join('');
+  document.getElementById('kickTechList').innerHTML = TECHNIQUES.kick.map((t,i)=>techHtml(t,'kick'+i)).join('');
+  document.querySelectorAll('.tech-head').forEach(h=>{
+    h.addEventListener('click', ()=>{
+      const body = h.nextElementSibling;
+      const open = body.classList.toggle('open');
+      h.querySelector('.car').textContent = open? '▾':'▸';
+    });
+  });
+}
+function techHtml(t, id){
+  return `<div class="tech-card">
+    <div class="tech-head" id="h-${id}"><span class="tname">${t.name}</span><span class="car">▸</span></div>
+    <div class="tech-body">
+      <ul class="kp">${t.pts.map(p=>`<li>${p}</li>`).join('')}</ul>
+      <div class="tag-row"><span class="tag">Learn technique before speed</span></div>
+      <div style="margin-top:10px;"><a href="${YT(t.q)}" target="_blank" rel="noopener">▶ Recommended video search →</a></div>
+    </div>
+  </div>`;
+}
+
+/* ============================================================
+   PROGRESS
+   ============================================================ */
+function renderProgress(){
+  const stats = computeStats();
+  document.getElementById('lifetimeStats').innerHTML = `
+    <div class="stat-box"><div class="stat-num">${stats.totalWorkouts}</div><div class="stat-label">Total Workouts</div></div>
+    <div class="stat-box"><div class="stat-num">${longestStreak()}</div><div class="stat-label">Longest Streak</div></div>
+    <div class="stat-box"><div class="stat-num">${stats.totalRounds}</div><div class="stat-label">Total Rounds</div></div>
+    <div class="stat-box"><div class="stat-num">${Math.round(stats.totalMinutes/60)}</div><div class="stat-label">Training Hours</div></div>
+  `;
+
+  // strength progress: pick a representative set from most recent log per exercise, compare to previous
+  const strengthIds = uniqueStrengthIds();
+  let sHtml='';
+  strengthIds.forEach(id=>{
+    const entries = historyFor(id);
+    if(entries.length===0) return;
+    const latest = entries[0], prev = entries[1];
+    const latestTop = topSet(latest.e);
+    if(!latestTop) return;
+    let delta='';
+    if(prev){
+      const prevTop = topSet(prev.e);
+      if(prevTop){
+        if(latestTop.weight>prevTop.weight || (latestTop.weight===prevTop.weight && latestTop.reps>prevTop.reps)) delta=' ▲ improved';
+        else if(latestTop.weight<prevTop.weight) delta=' ▼';
+      }
+    }
+    sHtml += `<div class="pr-row"><div class="pr-name">${exNameById(id)}</div><div class="pr-val">${latestTop.weight}kg×${latestTop.reps}${delta}</div></div>`;
+  });
+  document.getElementById('strengthProgress').innerHTML = sHtml || `<div class="empty-state"><div class="em-ic">◇</div><div class="em-title">No strength data yet</div><div class="em-sub">Complete a workout to start tracking.</div></div>`;
+
+  // measurements
+  document.getElementById('measureProgress').innerHTML = measurementsHtml();
+
+  // PRs
+  const prEntries = Object.entries(prs);
+  document.getElementById('prList').innerHTML = prEntries.length ? prEntries.map(([id,p])=>`
+    <div class="pr-row"><div class="pr-name">${exNameById(id)}</div><div class="pr-val">${p.weight}kg × ${p.reps}</div></div>
+  `).join('') : `<div class="empty-state"><div class="em-ic">🏆</div><div class="em-title">No records yet</div><div class="em-sub">Your heaviest lifts will appear here.</div></div>`;
+
+  // achievements
+  document.getElementById('achList').innerHTML = ACHIEVEMENTS.map(a=>{
+    const on = !!unlocked[a.id];
+    return `<div class="ach-row ${on?'':'locked'}"><div class="ach-badge ${on?'unlocked':''}">${on?'★':'☆'}</div><div><div class="ach-title">${a.title}</div><div class="ach-desc">${a.desc}</div></div></div>`;
+  }).join('');
+}
+
+function uniqueStrengthIds(){
+  const s = new Set();
+  Object.values(PROGRAM).forEach(d=> (d.blocks||[]).forEach(b=> b.exercises.forEach(e=>{ if(e.type==='strength') s.add(e.id); })));
+  return Array.from(s);
+}
+function exNameById(id){
+  for(const d of Object.values(PROGRAM)) for(const b of (d.blocks||[])) for(const e of b.exercises) if(e.id===id) return e.name;
+  return id;
+}
+function historyFor(exId){
+  return Object.keys(logs).sort().reverse().map(d=>({d, e:logs[d].exercises[exId]})).filter(x=>x.e && x.e.sets && x.e.sets.length);
+}
+function topSet(e){
+  if(!e.sets || !e.sets.length) return null;
+  let best=null;
+  e.sets.forEach(s=>{ if(s.weight!=null && (!best || s.weight>best.weight)) best=s; });
+  return best;
+}
+
+function measurementsHtml(){
+  if(!measurements.length) return `<div class="empty-state"><div class="em-ic">△</div><div class="em-title">No measurements logged</div><div class="em-sub">Tap "+ Log" to record your first entry.</div></div>`;
+  const first = measurements[0], last = measurements[measurements.length-1];
+  const fields = [['weight','Weight','kg'],['chest','Chest','cm'],['waist','Waist','cm'],['armL','Left Arm','cm'],['armR','Right Arm','cm'],['thighL','Left Thigh','cm'],['thighR','Right Thigh','cm']];
+  return fields.map(([k,label,unit])=>{
+    if(last[k]==null) return '';
+    const change = first[k]!=null ? (last[k]-first[k]) : 0;
+    const sign = change>0?'+':'';
+    return `<div class="pr-row"><div class="pr-name">${label}</div><div class="pr-val">${last[k]}${unit} <span class="mchange ${change<0?'neg':''}">${sign}${change}${unit}</span></div></div>`;
+  }).join('');
+}
+
+/* measurement modal */
+const MFIELDS = [['weight','Weight (kg)'],['chest','Chest (cm)'],['waist','Waist (cm)'],['armL','Left Arm (cm)'],['armR','Right Arm (cm)'],['thighL','Left Thigh (cm)'],['thighR','Right Thigh (cm)']];
+document.getElementById('addMeasureBtn').addEventListener('click', ()=>{
+  document.getElementById('measureForm').innerHTML = MFIELDS.map(([k,l])=>`
+    <div class="mfield"><label>${l}</label><input type="number" step="0.1" id="m-${k}"></div>`).join('');
+  document.getElementById('measureModalBg').classList.add('open');
+});
+document.getElementById('measureCloseX').addEventListener('click', ()=> document.getElementById('measureModalBg').classList.remove('open'));
+document.getElementById('saveMeasureBtn').addEventListener('click', async ()=>{
+  const entry = {date: todayStr()};
+  MFIELDS.forEach(([k])=>{ const v = document.getElementById('m-'+k).value; if(v!=='') entry[k]=parseFloat(v); });
+  measurements.push(entry);
+  await sSet('measurements', measurements);
+  document.getElementById('measureModalBg').classList.remove('open');
+  toast('Measurements saved');
+  renderProgress();
+});
+
+/* ============================================================
+   ACHIEVEMENTS CHECK
+   ============================================================ */
+async function checkAchievements(){
+  const stats = computeStats();
+  const summary = {totalWorkouts:stats.totalWorkouts, totalRounds:stats.totalRounds, longestStreak: longestStreak()};
+  let newly=[];
+  ACHIEVEMENTS.forEach(a=>{
+    if(!unlocked[a.id] && a.cond(summary)){ unlocked[a.id]=todayStr(); newly.push(a); }
+  });
+  if(newly.length){ await sSet('achievements', unlocked); toast(newly.length===1? `Achievement unlocked: ${newly[0].title}` : `${newly.length} achievements unlocked!`); }
+}
+
+/* ============================================================
+   CALENDAR
+   ============================================================ */
+function renderCalendar(){
+  const y = calCursor.getFullYear(), m = calCursor.getMonth();
+  document.getElementById('calTitle').textContent = calCursor.toLocaleDateString('en-US',{month:'long', year:'numeric'});
+  const dow = document.getElementById('calDow');
+  dow.innerHTML = ['M','T','W','T','F','S','S'].map(d=>`<div class="cal-dow">${d}</div>`).join('');
+
+  const firstDay = new Date(y,m,1);
+  let startOffset = firstDay.getDay(); startOffset = startOffset===0?6:startOffset-1; // Mon-first
+  const daysInMonth = new Date(y,m+1,0).getDate();
+  const grid = document.getElementById('calGrid');
+  let html='';
+  for(let i=0;i<startOffset;i++) html += `<div class="cal-cell empty"></div>`;
+  for(let d=1; d<=daysInMonth; d++){
+    const dt = new Date(y,m,d);
+    const ds = dateStr(dt);
+    const st = statusForDate(ds);
+    const isToday = ds===todayStr();
+    let sym='';
+    if(st==='completed') sym='✓'; else if(st==='partial') sym='◐'; else if(st==='missed') sym='✕'; else if(st==='rest') sym='–';
+    html += `<div class="cal-cell ${st} ${isToday?'today':''}" data-date="${ds}"><div class="dnum">${d}</div><div>${sym}</div></div>`;
+  }
+  grid.innerHTML = html;
+  grid.querySelectorAll('.cal-cell[data-date]').forEach(c=> c.addEventListener('click', ()=> showCalDetail(c.dataset.date)));
+
+  // preselect today or clear
+  const det = document.getElementById('calDetail');
+  if(m===new Date().getMonth() && y===new Date().getFullYear()) showCalDetail(todayStr());
+  else det.innerHTML='';
+}
+document.getElementById('calPrev').addEventListener('click', ()=>{ calCursor.setMonth(calCursor.getMonth()-1); renderCalendar(); });
+document.getElementById('calNext').addEventListener('click', ()=>{ calCursor.setMonth(calCursor.getMonth()+1); renderCalendar(); });
+
+function showCalDetail(ds){
+  const dt = parseDate(ds);
+  const dayIdx = dt.getDay();
+  const day = PROGRAM[dayIdx];
+  const log = logs[ds];
+  const det = document.getElementById('calDetail');
+
+  if(day.rest){
+    det.innerHTML = `<div class="card"><div class="eyebrow"><span class="dot"></span>${fmtLong(dt)}</div><div style="font-family:'Oswald'; font-size:16px; text-transform:uppercase;">Rest Day</div></div>`;
+    return;
+  }
+  const list = dayExerciseList(dayIdx);
+  if(!log || log.status==='pending'){
+    const future = ds>=todayStr();
+    det.innerHTML = `<div class="card">
+      <div class="eyebrow"><span class="dot"></span>${fmtLong(dt)}</div>
+      <div style="font-family:'Oswald'; font-size:16px; text-transform:uppercase;">${day.focus}</div>
+      <div class="sub" style="margin-top:4px;">${future? 'Scheduled — not yet trained.' : 'Missed — you can still complete it and the original date will be preserved.'}</div>
+      <button class="btn primary full" style="margin-top:12px;" id="calStartBtn">${future?'Preview / Start':'Complete This Workout'}</button>
+    </div>`;
+    document.getElementById('calStartBtn').addEventListener('click', ()=>{ switchView('train'); startRunner(ds, dayIdx); });
+    return;
+  }
+  const rounds = list.filter(e=>e.type==='rounds').reduce((a,e)=> a + ((log.exercises[e.id]&&log.exercises[e.id].roundsCompleted)||0), 0);
+  det.innerHTML = `<div class="card">
+    <div class="eyebrow"><span class="dot"></span>${fmtLong(dt)}</div>
+    <div style="font-family:'Oswald'; font-size:16px; text-transform:uppercase;">${log.status==='completed'?'Completed':'Partially Completed'}${log.late?' · Logged Late':''}</div>
+    <div class="sub" style="margin-top:4px;">${day.focus}</div>
+    <div class="summary-list" style="margin-top:12px;">
+      <div class="stat-box"><div class="stat-num">${log.completedCount}/${log.totalCount}</div><div class="stat-label">Exercises</div></div>
+      <div class="stat-box"><div class="stat-num">${log.durationMin||0}</div><div class="stat-label">Minutes</div></div>
+    </div>
+    ${rounds? `<div class="sub" style="margin-top:8px;">${rounds} rounds thrown</div>`:''}
+  </div>`;
+}
+
+/* ============================================================
+   SETTINGS / BACKUP
+   ============================================================ */
+document.getElementById('settingsBtn').addEventListener('click', ()=> document.getElementById('settingsModalBg').classList.add('open'));
+document.getElementById('settingsCloseX').addEventListener('click', ()=> document.getElementById('settingsModalBg').classList.remove('open'));
+
+document.getElementById('exportBtn').addEventListener('click', ()=>{
+  const payload = {logs, measurements, prs, achievements:unlocked, settings, exportedAt:new Date().toISOString()};
+  const blob = new Blob([JSON.stringify(payload,null,2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = `ring-and-iron-backup-${todayStr()}.json`;
+  document.body.appendChild(a); a.click(); a.remove();
+  URL.revokeObjectURL(url);
+  toast('Backup downloaded');
+});
+document.getElementById('importBtn').addEventListener('click', ()=> document.getElementById('importFile').click());
+document.getElementById('importFile').addEventListener('change', async (e)=>{
+  const file = e.target.files[0]; if(!file) return;
+  try{
+    const text = await file.text();
+    const data = JSON.parse(text);
+    logs = data.logs || {};
+    measurements = data.measurements || [];
+    prs = data.prs || {};
+    unlocked = data.achievements || {};
+    settings = data.settings || settings;
+    await Promise.all([sSet('logs',logs), sSet('measurements',measurements), sSet('prs',prs), sSet('achievements',unlocked), sSet('settings',settings)]);
+    toast('Backup restored');
+    document.getElementById('settingsModalBg').classList.remove('open');
+    renderHome();
+  }catch(err){ toast('Could not read that file'); }
+  e.target.value='';
+});
+document.getElementById('resetBtn').addEventListener('click', async ()=>{
+  const c1 = confirm('This will permanently erase your entire training history. This cannot be undone. Continue?');
+  if(!c1) return;
+  const typed = prompt('Type DELETE to confirm.');
+  if(typed !== 'DELETE'){ toast('Reset cancelled'); return; }
+  logs={}; measurements=[]; prs={}; unlocked={}; settings={startDate: todayStr()};
+  await Promise.all([sSet('logs',logs), sSet('measurements',measurements), sSet('prs',prs), sSet('achievements',unlocked), sSet('settings',settings)]);
+  document.getElementById('settingsModalBg').classList.remove('open');
+  toast('All data erased');
+  renderHome();
+});
+
+/* ============================================================
+   INSTALL / PWA
+   ============================================================ */
+let deferredInstallPrompt = null;
+window.addEventListener('beforeinstallprompt', (e)=>{
+  e.preventDefault();
+  deferredInstallPrompt = e;
+  const btn = document.getElementById('installBtn');
+  btn.style.display = 'block';
+});
+document.getElementById('installBtn').addEventListener('click', async ()=>{
+  if(!deferredInstallPrompt) return;
+  deferredInstallPrompt.prompt();
+  const {outcome} = await deferredInstallPrompt.userChoice;
+  if(outcome==='accepted') toast('Installed — check your home screen');
+  deferredInstallPrompt = null;
+  document.getElementById('installBtn').style.display='none';
+});
+window.addEventListener('appinstalled', ()=> toast('App installed'));
+
+(function showPlatformInstructions(){
+  const ua = navigator.userAgent || '';
+  const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+  if(isStandalone) return; // already installed and running as an app — no need to show instructions
+  const isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
+  const isAndroid = /Android/.test(ua);
+  if(isIOS) document.getElementById('iosInstall').style.display='block';
+  else if(isAndroid) document.getElementById('androidInstall').style.display='block';
+  else document.getElementById('genericInstall').style.display='block';
+})();
+
+/* Best-effort offline support. Service workers require the page to be
+   served over https (or localhost) — this silently does nothing if the
+   file is opened directly (file://), which is expected and harmless. */
+if('serviceWorker' in navigator && (location.protocol==='https:' || location.hostname==='localhost')){
+  const swSource = `
+    const CACHE = 'ring-iron-v1';
+    self.addEventListener('install', e => { self.skipWaiting(); });
+    self.addEventListener('activate', e => { self.clients.claim(); });
+    self.addEventListener('fetch', event => {
+      event.respondWith(
+        caches.open(CACHE).then(async cache => {
+          const cached = await cache.match(event.request);
+          const network = fetch(event.request).then(res => { cache.put(event.request, res.clone()); return res; }).catch(()=>cached);
+          return cached || network;
+        })
+      );
+    });
+  `;
+  try{
+    const blob = new Blob([swSource], {type:'text/javascript'});
+    const swUrl = URL.createObjectURL(blob);
+    navigator.serviceWorker.register(swUrl).catch(()=>{});
+  }catch(e){ /* ignore — offline caching is a bonus, not a requirement */ }
+}
+
+/* ============================================================
+   INIT
+   ============================================================ */
+async function init(){
+  [logs, measurements, prs, unlocked, settings] = await Promise.all([
+    sGet('logs', {}), sGet('measurements', []), sGet('prs', {}), sGet('achievements', {}), sGet('settings', null)
+  ]);
+  if(!settings){ settings = {startDate: todayStr()}; await sSet('settings', settings); }
+  renderHome();
+  checkAchievements();
+}
+init();
+
+})();
+</script>
+</body>
+</html>
